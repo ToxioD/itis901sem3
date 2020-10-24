@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign In</title>
+    <style>
+        #form_reg {
+            width: 300px;
+            margin: 0px 20px 20px 20px;
+            padding: 10px 0px 10px 10px;
+            border: 1px solid #D0D0D0;
+        }
+        .elem_reg {
+            width: 250px;
+            margin: 0px 5px 5px 0px;
+        }
+
+        #submit_button {
+            width: 100px;
+            margin: 20px 0px 0px 0px;
+            color: black;
+            background-color: floralwhite;
+            border-radius: 5px;
+            border-width: thin;
+        }
+    </style>
+</head>
+<body>
+<div id="form_reg">
+<form action="/signin" method="post">
+    <input id="login_input" name="login_input" placeholder="Login" class="elem_reg">
+
+    <input id="password_input" name="password_input" placeholder="Password" class="elem_reg">
+
+    <input id="submit_button" type="submit" value="Sign In!">
+</form>
+</div>
+</body>
+</html>
