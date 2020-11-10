@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="semork1-0.1.war">
+    <root id="archive" name="semwork1-0.1.war">
       <element id="artifact" artifact-name="semwork1:war exploded" />
     </root>
   </artifact>

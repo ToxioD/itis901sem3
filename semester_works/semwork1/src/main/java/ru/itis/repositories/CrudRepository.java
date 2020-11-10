@@ -10,4 +10,5 @@ public interface CrudRepository<T> {
 
     Optional<T> findById(Long id);
     List<T> findAll();
+    List<T> findAllByIds(List<Long> ids);
 }

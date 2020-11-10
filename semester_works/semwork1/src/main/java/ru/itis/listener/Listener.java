@@ -3,10 +3,7 @@ package ru.itis.listener;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import ru.itis.repositories.RollHistRepository;
-import ru.itis.repositories.RollHistRepositoryImpl;
-import ru.itis.repositories.UsersRepository;
-import ru.itis.repositories.UsersRepositoryJdbcTemplateImpl;
+import ru.itis.repositories.*;
 import ru.itis.services.*;
 
 import javax.servlet.ServletContext;
@@ -18,25 +15,39 @@ import javax.servlet.annotation.WebListener;
 public class Listener implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent sce) {
+        //context
         ServletContext servletContext = sce.getServletContext();
 
+        //datasource
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("org.postgresql.Driver");
         dataSource.setUrl(System.getenv("DB_URL"));
         dataSource.setUsername(System.getenv("DB_USERNAME"));
         dataSource.setPassword(System.getenv("DB_PASSWORD"));
 
+        //password encoder
         PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+
+        //repositories
         UsersRepository usersRepository = new UsersRepositoryJdbcTemplateImpl(dataSource);
         RollHistRepository historyRepository = new RollHistRepositoryImpl(dataSource);
+        TrinketCrudRepositoryImpl trinketCrudRepository = new TrinketCrudRepositoryImpl(dataSource);
+
+        //services
         SignUpService signUpService = new SignUpServiceImpl(usersRepository, passwordEncoder);
         SignInService signInService = new SignInServiceImpl(usersRepository, passwordEncoder);
         RollService rollService = new RollServiceImpl();
+        RollService rollUniqueService = new RollUniqueServiceImpl();
         RollHistService historyService = new RollHistServiceImpl(historyRepository);
+        TrinketByRollService trinketService = new TrinketByRollServiceImpl(trinketCrudRepository);
+
+        //adding services to context
         servletContext.setAttribute("signUpService", signUpService);
         servletContext.setAttribute("signInService", signInService);
         servletContext.setAttribute("rollService", rollService);
+        servletContext.setAttribute("rollUniqueService", rollUniqueService);
         servletContext.setAttribute("historyService", historyService);
+        servletContext.setAttribute("trinketService", trinketService);
     }
 
     @Override

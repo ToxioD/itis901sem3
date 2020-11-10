@@ -45,6 +45,12 @@ public class RollServlet extends HttpServlet {
         JsonObject data = new Gson().fromJson(req.getReader(), JsonObject.class);
         Integer count = Integer.parseInt(data.get("count").getAsString());
         Integer dice = Integer.parseInt(data.get("dice").getAsString());
+        if (count < 1 || count > 1000) {
+            throw new IllegalArgumentException("Number of dices is not in range [1;1000]");
+        }
+        if (dice < 2 || dice > 1000) {
+            throw new IllegalArgumentException("Number of sides is not in range [2;1000]");
+        }
 
         List<Roll> rolls = rollService.getRollResult(count, dice);
         UserDto user = (UserDto)req.getSession().getAttribute("user");

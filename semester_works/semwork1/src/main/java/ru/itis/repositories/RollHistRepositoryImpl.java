@@ -3,7 +3,6 @@ package ru.itis.repositories;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import ru.itis.models.Roll;
-import ru.itis.models.User;
 
 import javax.sql.DataSource;
 import java.util.List;
@@ -71,6 +70,11 @@ public class RollHistRepositoryImpl implements RollHistRepository {
     @Override
     public List<Roll> findAll() {
         return jdbcTemplate.query(SQL_SELECT_ALL, rollRowMapper);
+    }
+
+    @Override
+    public List<Roll> findAllByIds(List<Long> ids) {
+        return null;
     }
 
     @Override
