@@ -1,13 +1,13 @@
-#Server
+# Server
 
 **Apache Tomcat 8.5.58**
 
-#Deployment
+# Deployment
 
 - Artifact **semwork1:war**
 - Application context **/**
 
-#Startup/Connection
+# Startup/Connection
 
 Pass environmental variables:
 

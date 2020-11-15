@@ -1,5 +1,5 @@
-#Tables
-###Users
+# Tables
+### Users
 ```postgresql
 create table users(
     id bigserial primary key,
@@ -9,7 +9,7 @@ create table users(
     lastName varchar(20)
 );
 ```
-###Rolls
+### Rolls
 ```postgresql
 create table rolls (
 	id bigserial primary key,
@@ -19,22 +19,22 @@ create table rolls (
 	color varchar(20)
 );
 ```
-###Trinkets
+### Trinkets
 ```postgresql
 create table trinkets (
 	id bigserial primary key,
 	name varchar(200)
 );
 ```
-###Photos
+### Photos
 ```postgresql
 create table photos (
 	id bigserial primary key,
 	path varchar
 );
 ```
-#Values
-###Trinkets
+# Values
+### Trinkets
 ```postgresql
 insert into trinkets(name) values ('A mummified goblin hand'),
 ('A piece of crystal that faintly glows in the moonlight'),
