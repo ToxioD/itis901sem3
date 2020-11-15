@@ -1,6 +1,6 @@
 # Tables
 ### Users
-```postgresql
+```sql
 create table users(
     id bigserial primary key,
     email varchar(30),
@@ -10,7 +10,7 @@ create table users(
 );
 ```
 ### Rolls
-```postgresql
+```sql
 create table rolls (
 	id bigserial primary key,
 	userId bigint references users,
@@ -20,14 +20,14 @@ create table rolls (
 );
 ```
 ### Trinkets
-```postgresql
+```sql
 create table trinkets (
 	id bigserial primary key,
 	name varchar(200)
 );
 ```
 ### Photos
-```postgresql
+```sql
 create table photos (
 	id bigserial primary key,
 	path varchar
@@ -35,7 +35,7 @@ create table photos (
 ```
 # Values
 ### Trinkets
-```postgresql
+```sql
 insert into trinkets(name) values ('A mummified goblin hand'),
 ('A piece of crystal that faintly glows in the moonlight'),
 ('A gold coin minted in an unknown land'),
