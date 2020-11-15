@@ -5,6 +5,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import ru.itis.repositories.*;
 import ru.itis.services.*;
+import sun.misc.BASE64Encoder;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
@@ -25,13 +26,15 @@ public class Listener implements ServletContextListener {
         dataSource.setUsername(System.getenv("DB_USERNAME"));
         dataSource.setPassword(System.getenv("DB_PASSWORD"));
 
-        //password encoder
+        //encoders
         PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        BASE64Encoder fileEncoder = new BASE64Encoder();
 
         //repositories
         UsersRepository usersRepository = new UsersRepositoryJdbcTemplateImpl(dataSource);
         RollHistRepository historyRepository = new RollHistRepositoryImpl(dataSource);
         TrinketCrudRepositoryImpl trinketCrudRepository = new TrinketCrudRepositoryImpl(dataSource);
+        PhotoCrudRepositoryImpl photoCrudRepository = new PhotoCrudRepositoryImpl(dataSource);
 
         //services
         SignUpService signUpService = new SignUpServiceImpl(usersRepository, passwordEncoder);
@@ -40,6 +43,8 @@ public class Listener implements ServletContextListener {
         RollService rollUniqueService = new RollUniqueServiceImpl();
         RollHistService historyService = new RollHistServiceImpl(historyRepository);
         TrinketByRollService trinketService = new TrinketByRollServiceImpl(trinketCrudRepository);
+        FileService photoService = new PhotoService(photoCrudRepository);
+        FileEncodeService photoEncodeService = new FileBase64EncodeServiceImpl(fileEncoder);
 
         //adding services to context
         servletContext.setAttribute("signUpService", signUpService);
@@ -48,6 +53,8 @@ public class Listener implements ServletContextListener {
         servletContext.setAttribute("rollUniqueService", rollUniqueService);
         servletContext.setAttribute("historyService", historyService);
         servletContext.setAttribute("trinketService", trinketService);
+        servletContext.setAttribute("photoService", photoService);
+        servletContext.setAttribute("photoEncodeService", photoEncodeService);
     }
 
     @Override

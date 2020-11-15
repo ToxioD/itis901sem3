@@ -3,11 +3,8 @@ package ru.itis.servlets;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
-import ru.itis.dto.UserDto;
 import ru.itis.models.Roll;
 import ru.itis.models.Trinket;
-import ru.itis.repositories.CrudRepository;
-import ru.itis.services.RollHistService;
 import ru.itis.services.RollService;
 import ru.itis.services.TrinketByRollService;
 
