@@ -3,6 +3,7 @@ package ru.itis.servlets;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+import ru.itis.dto.RollForm;
 import ru.itis.models.Roll;
 import ru.itis.models.Trinket;
 import ru.itis.services.RollService;
@@ -40,14 +41,21 @@ public class TrinketServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         JsonObject data = new Gson().fromJson(req.getReader(), JsonObject.class);
-        Integer count = Integer.parseInt(data.get("count").getAsString());
+        String countString = data.get("count").getAsString();
+        Integer count = (!countString.isEmpty()) ?
+                Integer.parseInt(countString) : 100;
+        RollForm rollForm = RollForm.builder()
+                .count(count)
+                .dice(100)
+                .build();
         boolean shuffle = data.get("shuffle").getAsBoolean();
-        if (count < 1 || count > 100) {
+        /*if (count < 1 || count > 100) {
             throw new IllegalArgumentException("Number is not in range [1;100]");
-        }
+        }*/
 
-        List<Roll> rolls = rollService.getRollResult(count, 100);
-        List<Trinket> trinkets = (shuffle) ? trinketService.getShuffledTrinkets(rolls) : trinketService.getTrinkets(rolls);
+        List<Roll> rolls = rollService.getRollResult(rollForm);
+        List<Trinket> trinkets =
+                (shuffle) ? trinketService.getShuffledTrinkets(rolls) : trinketService.getTrinkets(rolls);
 
         String trinketsAsJson = objectMapper.writeValueAsString(trinkets);
         resp.setContentType("application/json");

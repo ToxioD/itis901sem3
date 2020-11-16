@@ -3,6 +3,7 @@ package ru.itis.servlets;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+import ru.itis.dto.RollForm;
 import ru.itis.dto.UserDto;
 import ru.itis.models.Roll;
 import ru.itis.services.RollHistService;
@@ -43,16 +44,19 @@ public class RollServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         JsonObject data = new Gson().fromJson(req.getReader(), JsonObject.class);
-        Integer count = Integer.parseInt(data.get("count").getAsString());
-        Integer dice = Integer.parseInt(data.get("dice").getAsString());
+        RollForm rollForm = RollForm.builder()
+                .count(Integer.parseInt(data.get("count").getAsString()))
+                .dice(Integer.parseInt(data.get("dice").getAsString()))
+                .build();
+        /*
         if (count < 1 || count > 1000) {
             throw new IllegalArgumentException("Number of dices is not in range [1;1000]");
         }
         if (dice < 2 || dice > 1000) {
             throw new IllegalArgumentException("Number of sides is not in range [2;1000]");
-        }
+        }*/
 
-        List<Roll> rolls = rollService.getRollResult(count, dice);
+        List<Roll> rolls = rollService.getRollResult(rollForm);
         UserDto user = (UserDto)req.getSession().getAttribute("user");
         historyService.updateRollHistory(user.getId(), rolls);
 

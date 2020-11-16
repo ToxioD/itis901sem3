@@ -1,5 +1,6 @@
 package ru.itis.services;
 
+import ru.itis.dto.RollForm;
 import ru.itis.models.Roll;
 
 import java.util.LinkedList;
@@ -9,7 +10,10 @@ import java.util.concurrent.ThreadLocalRandom;
 public class RollServiceImpl implements RollService {
 
     @Override
-    public List<Roll> getRollResult(Integer count, Integer dice) {
+    public List<Roll> getRollResult(RollForm rollForm) {
+        Integer count = rollForm.getCount();
+        Integer dice = rollForm.getDice();
+
         List<Roll> rolls = new LinkedList<>();
         Long finalResult = Long.valueOf(0);
         String dices = count + "d" + dice;
