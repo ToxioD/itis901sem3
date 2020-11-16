@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Dice Roller</title>
@@ -50,7 +50,7 @@
                 renderRoll(response, $('#roll'))
             },
             error: function (errmsg) {
-                alert('fuck off');
+                alert(errmsg.responseText);
             },
             dataType: "json",
             contentType: "application/json"

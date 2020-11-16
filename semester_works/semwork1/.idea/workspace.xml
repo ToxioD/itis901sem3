@@ -8,20 +8,27 @@
   <component name="ChangeListManager">
     <list default="true" id="b17f35fe-6aa5-4021-8d0b-5ae2157a9604" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/services/RollService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/services/RollService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/services/RollServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/services/RollServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/services/RollUniqueServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/services/RollUniqueServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/dto/RollForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/dto/RollForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/servlets/RollServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/servlets/RollServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/servlets/TrinketServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/servlets/TrinketServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/roll.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/roll.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/trinkets.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/trinkets.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/dto/RollForm$RollFormBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/itis/dto/RollForm$RollFormBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/dto/RollForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/itis/dto/RollForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/services/RollServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/itis/services/RollServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/services/RollUniqueServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/itis/services/RollUniqueServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/servlets/RollServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/itis/servlets/RollServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/servlets/TrinketServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/itis/servlets/TrinketServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/semwork1-0.1.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/semwork1-0.1.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/classes/ru/itis/services/RollService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/classes/ru/itis/services/RollService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/classes/ru/itis/dto/RollForm$RollFormBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/classes/ru/itis/dto/RollForm$RollFormBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/classes/ru/itis/dto/RollForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/classes/ru/itis/dto/RollForm.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/classes/ru/itis/services/RollServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/classes/ru/itis/services/RollServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/classes/ru/itis/services/RollUniqueServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/classes/ru/itis/services/RollUniqueServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/classes/ru/itis/servlets/RollServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/classes/ru/itis/servlets/RollServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/classes/ru/itis/servlets/TrinketServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/classes/ru/itis/servlets/TrinketServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/html/roll.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/html/roll.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/html/trinkets.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/html/trinkets.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +83,8 @@
       <recent name="ru.itis.servlets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\sem3\itis901sem3\semester_works\semwork1\src\main\webapp\WEB-INF\html" />
+      <recent name="D:\sem3\itis901sem3\semester_works\semwork1\src\main\webapp\WEB-INF\jsp" />
       <recent name="D:\sem3\11-901\Themes\05. Skeleton\src\main\webapp\WEB-INF\html" />
     </key>
   </component>
@@ -243,6 +252,8 @@
         <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="install package" />
         <option name="BuildArtifacts" enabled="true">
           <artifact name="skeleton-example:war" />
+          <artifact name="semwork1:war" />
+          <artifact name="semwork1:war exploded" />
         </option>
       </method>
     </configuration>
@@ -285,7 +296,8 @@
       <workItem from="1604912278344" duration="2753000" />
       <workItem from="1604928013208" duration="8050000" />
       <workItem from="1605443754410" duration="8056000" />
-      <workItem from="1605525312060" duration="3988000" />
+      <workItem from="1605525312060" duration="4976000" />
+      <workItem from="1605530328814" duration="4743000" />
     </task>
     <servers />
   </component>
@@ -293,10 +305,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="373" y="191" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605526623579">
+    <state x="373" y="191" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605530903837">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="373" y="191" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605526623579" />
+    <state x="373" y="191" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605530903837" />
     <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1605453773419">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -309,54 +321,54 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605454409565" />
-    <state width="1292" height="277" key="GridCell.Tab.0.bottom" timestamp="1605529308797">
+    <state width="1292" height="277" key="GridCell.Tab.0.bottom" timestamp="1605535307134">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605529308797" />
-    <state width="1292" height="277" key="GridCell.Tab.0.center" timestamp="1605529308797">
+    <state width="1292" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605535307134" />
+    <state width="1292" height="277" key="GridCell.Tab.0.center" timestamp="1605535307134">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605529308797" />
-    <state width="1292" height="277" key="GridCell.Tab.0.left" timestamp="1605529308797">
+    <state width="1292" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605535307134" />
+    <state width="1292" height="277" key="GridCell.Tab.0.left" timestamp="1605535307134">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605529308797" />
-    <state width="1292" height="277" key="GridCell.Tab.0.right" timestamp="1605529308797">
+    <state width="1292" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605535307134" />
+    <state width="1292" height="277" key="GridCell.Tab.0.right" timestamp="1605535307134">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605529308797" />
-    <state width="1292" height="277" key="GridCell.Tab.1.bottom" timestamp="1605529308575">
+    <state width="1292" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605535307134" />
+    <state width="1292" height="277" key="GridCell.Tab.1.bottom" timestamp="1605535307134">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="277" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605529308575" />
-    <state width="1292" height="277" key="GridCell.Tab.1.center" timestamp="1605529308575">
+    <state width="1292" height="277" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605535307134" />
+    <state width="1292" height="277" key="GridCell.Tab.1.center" timestamp="1605535307134">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="277" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605529308575" />
-    <state width="1292" height="277" key="GridCell.Tab.1.left" timestamp="1605529308575">
+    <state width="1292" height="277" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605535307134" />
+    <state width="1292" height="277" key="GridCell.Tab.1.left" timestamp="1605535307134">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="277" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605529308575" />
-    <state width="1292" height="277" key="GridCell.Tab.1.right" timestamp="1605529308575">
+    <state width="1292" height="277" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605535307134" />
+    <state width="1292" height="277" key="GridCell.Tab.1.right" timestamp="1605535307134">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="277" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605529308575" />
-    <state width="1292" height="277" key="GridCell.Tab.2.bottom" timestamp="1605529308575">
+    <state width="1292" height="277" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605535307134" />
+    <state width="1292" height="277" key="GridCell.Tab.2.bottom" timestamp="1605535307134">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="277" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605529308575" />
-    <state width="1292" height="277" key="GridCell.Tab.2.center" timestamp="1605529308575">
+    <state width="1292" height="277" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605535307134" />
+    <state width="1292" height="277" key="GridCell.Tab.2.center" timestamp="1605535307134">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="277" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605529308575" />
-    <state width="1292" height="277" key="GridCell.Tab.2.left" timestamp="1605529308575">
+    <state width="1292" height="277" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605535307134" />
+    <state width="1292" height="277" key="GridCell.Tab.2.left" timestamp="1605535307134">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="277" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605529308575" />
-    <state width="1292" height="277" key="GridCell.Tab.2.right" timestamp="1605529308575">
+    <state width="1292" height="277" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605535307134" />
+    <state width="1292" height="277" key="GridCell.Tab.2.right" timestamp="1605535307134">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="277" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605529308575" />
+    <state width="1292" height="277" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605535307134" />
     <state x="440" y="96" key="SettingsEditor" timestamp="1604913139278">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

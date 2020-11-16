@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Trinkets</title>
@@ -49,7 +49,7 @@
                 renderTable(response, $('#trinkets'))
             },
             error: function (errmsg) {
-                alert('fuck off');
+                alert(errmsg.responseText);
             },
             dataType: "json",
             contentType: "application/json"
