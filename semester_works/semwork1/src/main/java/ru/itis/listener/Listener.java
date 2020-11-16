@@ -1,5 +1,8 @@
 package ru.itis.listener;
 
+import jakarta.validation.Validation;
+import jakarta.validation.Validator;
+import jakarta.validation.ValidatorFactory;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -25,6 +28,10 @@ public class Listener implements ServletContextListener {
         dataSource.setUrl(System.getenv("DB_URL"));
         dataSource.setUsername(System.getenv("DB_USERNAME"));
         dataSource.setPassword(System.getenv("DB_PASSWORD"));
+
+        //validation
+        ValidatorFactory validatorFactory = Validation.buildDefaultValidatorFactory();
+        Validator validator = validatorFactory.getValidator();
 
         //encoders
         PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
@@ -55,6 +62,7 @@ public class Listener implements ServletContextListener {
         servletContext.setAttribute("trinketService", trinketService);
         servletContext.setAttribute("photoService", photoService);
         servletContext.setAttribute("photoEncodeService", photoEncodeService);
+        servletContext.setAttribute("validator", validator);
     }
 
     @Override

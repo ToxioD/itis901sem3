@@ -7,25 +7,101 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b17f35fe-6aa5-4021-8d0b-5ae2157a9604" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_el_jakarta_el_api_4_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_3_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jakarta_el_4_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_7_0_0_Alpha6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/semwork1_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/semwork1_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/dto/UserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semwork1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/semwork1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/dto/UserForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/dto/UserForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/filters/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/filters/AuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/listener/SkeletonListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/listener/Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/repositories/CrudRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/repositories/CrudRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/repositories/UsersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/repositories/UsersRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/repositories/UsersRepositoryJdbcTemplateImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/repositories/UsersRepositoryJdbcTemplateImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/services/SignInService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/services/SignInService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/services/SignInServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/services/SignInServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/services/SignUpService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/services/SignUpService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/services/SignUpServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/services/SignUpServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/servlets/ProfileServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/servlets/ProfileServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/servlets/SignInServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/servlets/SignInServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/listener/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/listener/Listener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/servlets/SignUpServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/servlets/SignUpServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/sign_in.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/sign_in.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/sign_up.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/sign_up.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/dto/UserForm$UserFormBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/itis/dto/UserForm$UserFormBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/dto/UserForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/itis/dto/UserForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/listener/Listener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/itis/listener/Listener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/repositories/PhotoCrudRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/itis/repositories/PhotoCrudRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/services/PhotoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/itis/services/PhotoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/servlets/GalleryServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/itis/servlets/GalleryServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/servlets/SignUpServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/itis/servlets/SignUpServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/servlets/TrinketServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/itis/servlets/TrinketServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/dto/UserDto$UserDtoBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/dto/UserDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/dto/UserForm$UserFormBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/dto/UserForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/filters/AuthenticationFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/listener/Listener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/models/Roll$RollBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/models/Roll.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/models/Trinket$TrinketBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/models/Trinket.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/models/User$UserBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/models/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/repositories/CrudRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/repositories/RollHistRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/repositories/RollHistRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/repositories/TrinketCrudRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/repositories/UsersRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/repositories/UsersRepositoryJdbcTemplateImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/services/RollHistService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/services/RollHistServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/services/RollService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/services/RollServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/services/RollUniqueServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/services/SignInService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/services/SignInServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/services/SignUpService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/services/SignUpServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/services/TrinketByRollService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/services/TrinketByRollServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/servlets/HomeServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/servlets/ProfileServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/servlets/RollServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/servlets/SignInServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/servlets/SignUpServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/classes/ru/itis/servlets/TrinketServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/html/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/html/roll.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/html/trinkets.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/jsp/profile.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/jsp/sign_in.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/jsp/sign_up.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/lib/checker-qual-3.5.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/lib/gson-2.8.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/lib/jackson-annotations-2.11.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/lib/jackson-core-2.11.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/lib/jackson-databind-2.11.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/lib/postgresql-42.2.18.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/lib/spring-aop-5.2.9.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/lib/spring-beans-5.2.9.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/lib/spring-context-5.2.9.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/lib/spring-core-5.2.9.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/lib/spring-expression-5.2.9.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/lib/spring-jcl-5.2.9.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/lib/spring-jdbc-5.2.9.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/lib/spring-security-core-5.4.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/lib/spring-tx-5.2.9.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semork1-0.1/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semwork1-0.1.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/semwork1-0.1.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/classes/ru/itis/dto/UserForm$UserFormBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/classes/ru/itis/dto/UserForm$UserFormBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/classes/ru/itis/dto/UserForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/classes/ru/itis/dto/UserForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/classes/ru/itis/listener/Listener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/classes/ru/itis/listener/Listener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/classes/ru/itis/repositories/PhotoCrudRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/classes/ru/itis/repositories/PhotoCrudRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/classes/ru/itis/services/PhotoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/classes/ru/itis/services/PhotoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/classes/ru/itis/servlets/GalleryServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/classes/ru/itis/servlets/GalleryServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/classes/ru/itis/servlets/SignUpServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/classes/ru/itis/servlets/SignUpServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/classes/ru/itis/servlets/TrinketServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/classes/ru/itis/servlets/TrinketServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/jsp/gallery.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/jsp/gallery.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/jsp/sign_up.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/jsp/sign_up.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +138,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="C:/Program Files/Amazon/AWSSAMCLI/bin/sam.cmd" />
@@ -263,7 +340,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -288,6 +365,7 @@
       <workItem from="1604912278344" duration="2753000" />
       <workItem from="1604928013208" duration="8050000" />
       <workItem from="1605443754410" duration="8056000" />
+      <workItem from="1605525312060" duration="2340000" />
     </task>
     <servers />
   </component>
@@ -295,10 +373,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="382" y="206" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605452251749">
+    <state x="373" y="191" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605526623579">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="382" y="206" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605452251749" />
+    <state x="373" y="191" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605526623579" />
     <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1605453773419">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -311,54 +389,54 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605454409565" />
-    <state width="1292" height="277" key="GridCell.Tab.0.bottom" timestamp="1605456085325">
+    <state width="1292" height="277" key="GridCell.Tab.0.bottom" timestamp="1605527767618">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605456085325" />
-    <state width="1292" height="277" key="GridCell.Tab.0.center" timestamp="1605456085324">
+    <state width="1292" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605527767618" />
+    <state width="1292" height="277" key="GridCell.Tab.0.center" timestamp="1605527767618">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605456085324" />
-    <state width="1292" height="277" key="GridCell.Tab.0.left" timestamp="1605456085324">
+    <state width="1292" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605527767618" />
+    <state width="1292" height="277" key="GridCell.Tab.0.left" timestamp="1605527767618">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605456085324" />
-    <state width="1292" height="277" key="GridCell.Tab.0.right" timestamp="1605456085324">
+    <state width="1292" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605527767618" />
+    <state width="1292" height="277" key="GridCell.Tab.0.right" timestamp="1605527767618">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605456085324" />
-    <state width="1292" height="277" key="GridCell.Tab.1.bottom" timestamp="1605456085325">
+    <state width="1292" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605527767618" />
+    <state width="1292" height="277" key="GridCell.Tab.1.bottom" timestamp="1605527767433">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="277" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605456085325" />
-    <state width="1292" height="277" key="GridCell.Tab.1.center" timestamp="1605456085325">
+    <state width="1292" height="277" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605527767433" />
+    <state width="1292" height="277" key="GridCell.Tab.1.center" timestamp="1605527767433">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="277" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605456085325" />
-    <state width="1292" height="277" key="GridCell.Tab.1.left" timestamp="1605456085325">
+    <state width="1292" height="277" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605527767433" />
+    <state width="1292" height="277" key="GridCell.Tab.1.left" timestamp="1605527767433">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="277" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605456085325" />
-    <state width="1292" height="277" key="GridCell.Tab.1.right" timestamp="1605456085325">
+    <state width="1292" height="277" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605527767433" />
+    <state width="1292" height="277" key="GridCell.Tab.1.right" timestamp="1605527767433">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="277" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605456085325" />
-    <state width="1292" height="277" key="GridCell.Tab.2.bottom" timestamp="1605456085325">
+    <state width="1292" height="277" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605527767433" />
+    <state width="1292" height="277" key="GridCell.Tab.2.bottom" timestamp="1605527767433">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="277" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605456085325" />
-    <state width="1292" height="277" key="GridCell.Tab.2.center" timestamp="1605456085325">
+    <state width="1292" height="277" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605527767433" />
+    <state width="1292" height="277" key="GridCell.Tab.2.center" timestamp="1605527767433">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="277" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605456085325" />
-    <state width="1292" height="277" key="GridCell.Tab.2.left" timestamp="1605456085325">
+    <state width="1292" height="277" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605527767433" />
+    <state width="1292" height="277" key="GridCell.Tab.2.left" timestamp="1605527767433">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="277" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605456085325" />
-    <state width="1292" height="277" key="GridCell.Tab.2.right" timestamp="1605456085325">
+    <state width="1292" height="277" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605527767433" />
+    <state width="1292" height="277" key="GridCell.Tab.2.right" timestamp="1605527767433">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="277" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605456085325" />
+    <state width="1292" height="277" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605527767433" />
     <state x="440" y="96" key="SettingsEditor" timestamp="1604913139278">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

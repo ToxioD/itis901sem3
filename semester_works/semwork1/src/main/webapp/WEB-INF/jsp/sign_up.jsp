@@ -5,6 +5,11 @@
     <title>Title</title>
 </head>
 <body>
+<ul>
+    <c:forEach items="${errors}" var="error">
+        <li>${error.getMessage()}</li>
+    </c:forEach>
+</ul>
 <form action="/signUp" method="post">
     <input type="email" name="email" placeholder="Email">
     <input type="text" name="firstName" placeholder="First Name">
