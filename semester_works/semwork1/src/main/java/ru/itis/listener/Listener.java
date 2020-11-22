@@ -6,6 +6,8 @@ import jakarta.validation.ValidatorFactory;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import ru.itis.models.DndClass;
+import ru.itis.models.DndRace;
 import ru.itis.repositories.*;
 import ru.itis.services.*;
 import sun.misc.BASE64Encoder;
@@ -42,6 +44,8 @@ public class Listener implements ServletContextListener {
         RollHistRepository historyRepository = new RollHistRepositoryImpl(dataSource);
         TrinketCrudRepositoryImpl trinketCrudRepository = new TrinketCrudRepositoryImpl(dataSource);
         PhotoCrudRepositoryImpl photoCrudRepository = new PhotoCrudRepositoryImpl(dataSource);
+        DndClassCrudRepositoryImpl dndClassCrudRepository = new DndClassCrudRepositoryImpl(dataSource);
+        DndRaceCrudRepositoryImpl dndRaceCrudRepository = new DndRaceCrudRepositoryImpl(dataSource);
 
         //services
         SignUpService signUpService = new SignUpServiceImpl(usersRepository, passwordEncoder);
@@ -52,6 +56,8 @@ public class Listener implements ServletContextListener {
         TrinketByRollService trinketService = new TrinketByRollServiceImpl(trinketCrudRepository);
         FileService photoService = new PhotoService(photoCrudRepository);
         FileEncodeService photoEncodeService = new FileBase64EncodeServiceImpl(fileEncoder);
+        DndEntityService<DndClass> classEntityService = new DndEntityServiceImpl<>(dndClassCrudRepository);
+        DndEntityService<DndRace> raceEntityService = new DndEntityServiceImpl<>(dndRaceCrudRepository);
 
         //adding services to context
         servletContext.setAttribute("signUpService", signUpService);
@@ -63,6 +69,8 @@ public class Listener implements ServletContextListener {
         servletContext.setAttribute("photoService", photoService);
         servletContext.setAttribute("photoEncodeService", photoEncodeService);
         servletContext.setAttribute("validator", validator);
+        servletContext.setAttribute("classEntityService", classEntityService);
+        servletContext.setAttribute("raceEntityService", raceEntityService);
     }
 
     @Override

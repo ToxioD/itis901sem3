@@ -3,7 +3,6 @@ package ru.itis.servlets;
 import ru.itis.dto.UserDto;
 import ru.itis.dto.UserForm;
 import ru.itis.services.SignInService;
-import ru.itis.services.SignUpService;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
