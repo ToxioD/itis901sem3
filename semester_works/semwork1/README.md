@@ -28,6 +28,7 @@ This project contains website with following features:
 * Dice roller
 * Trinket generator
 * Photo gallery
+* Lists of D&D 5e races and classes
 
 ## Links
 

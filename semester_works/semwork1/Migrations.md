@@ -33,7 +33,7 @@ create table photos (
 	path varchar
 );
 ```
-###Classes
+### Classes
 ```sql
 create table classes(
 	id bigserial primary key,
@@ -43,7 +43,7 @@ create table classes(
 	isSpellcasting boolean
 );
 ```
-###Races
+### Races
 ```sql
 create table races(
 	id bigserial primary key,
@@ -159,7 +159,7 @@ insert into trinkets(name) values ('A mummified goblin hand'),
 ('A wooden box with a ceramic bottom that holds a living worm with a head on each end of its body'),
 ('A metal urn containing the ashes of a hero');
 ```
-###Classes
+### Classes
 ```sql
 insert into classes(name, description, hitDice, isSpellcasting) values ('Bard', 'In the worlds of D&D, words and music are not just vibrations of air, but vocalizations with power all their own. The bard is a master of song, speech, and the magic they contain. Bards say that the multiverse was spoken into existence, that the words of the gods gave it shape, and that echoes of these primordial Words of Creation still resound throughout the cosmos. The music of bards is an attempt to snatch and harness those echoes, subtly woven into their spells and powers.', 8, true),
 ('Cleric', 'Divine magic, as the name suggests, is the power of the gods, flowing from them into the world. Clerics are conduits for that power, manifesting it as miraculous effects. The gods don’t grant this power to everyone who seeks it, but only to those chosen to fulfill a high calling.', 8, true),
@@ -173,7 +173,7 @@ insert into classes(name, description, hitDice, isSpellcasting) values ('Bard', 
 ('Warlock', 'A warlock is defined by a pact with an otherworldly being. Sometimes the relationship between warlock and patron is like that of a cleric and a deity, though the beings that serve as patrons for warlocks are not gods. A warlock might lead a cult dedicated to a demon prince, an archdevil, or an utterly alien entity—beings not typically served by clerics. More often, though, the arrangement is similar to that between a master and an apprentice. The warlock learns and grows in power, at the cost of occasional services performed on the patron’s behalf.', 8, true),
 ('Wizard', 'Wild and enigmatic, varied in form and function, the power of magic draws students who seek to master its mysteries. Some aspire to become like the gods, shaping reality itself. Though the casting of a typical spell requires merely the utterance of a few strange words, fleeting gestures, and sometimes a pinch or clump of exotic materials, these surface components barely hint at the expertise attained after years of apprenticeship and countless hours of study.', 6, true);
 ```
-###Races
+### Races
 ```sql
 insert into races(name, description, ability, size, speed, hasDarkvision) values ('Dragonborn', 'Born of dragons, as their name proclaims, the dragonborn walk proudly through a world that greets them with fearful incomprehension. Shaped by draconic gods or the dragons themselves, dragonborn originally hatched from dragon eggs as a unique race, combining the best attributes of dragons and humanoids. Some dragonborn are faithful servants to true dragons, others form the ranks of soldiers in great wars, and still others find themselves adrift, with no clear calling in life.', 'Your Strength score increases by 2, and your Charisma score increases by 1.', 'Medium', 30, false),
 ('Dwarf', 'Kingdoms rich in ancient grandeur, halls carved into the roots of mountains, the echoing of picks and hammers in deep mines and blazing forges, a commitment to clan and tradition, and a burning hatred of goblins and orcs—these common threads unite all dwarves.', 'Your Constitution score increases by 2.', 'Medium', 25, true),
