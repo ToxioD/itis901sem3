@@ -20,6 +20,8 @@ public class DndEntityServiceImpl<T extends DndEntity> implements DndEntityServi
     @Override
     public List<T> getMatching(String prefix) {
         List<T> entities = getAll();
-        return entities.stream().filter(x -> x.getName().startsWith(prefix)).collect(Collectors.toList());
+        return entities.stream()
+                .filter(x -> x.getName().toLowerCase().startsWith(prefix.toLowerCase()))
+                .collect(Collectors.toList());
     }
 }

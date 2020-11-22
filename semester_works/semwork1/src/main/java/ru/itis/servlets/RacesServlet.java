@@ -1,5 +1,8 @@
 package ru.itis.servlets;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import ru.itis.models.DndRace;
 import ru.itis.services.DndEntityService;
 
@@ -16,6 +19,7 @@ import java.io.IOException;
 public class RacesServlet extends HttpServlet {
 
     private DndEntityService<DndRace> raceService;
+    private ObjectMapper objectMapper = new ObjectMapper();
 
     @Override
     public void init(ServletConfig config) throws ServletException {
@@ -25,13 +29,20 @@ public class RacesServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("races", raceService.getAll());
-        req.getRequestDispatcher("/WEB-INF/jsp/races.jsp").forward(req, resp);
+        req.getRequestDispatcher("/WEB-INF/html/races.html").forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+        JsonObject data = new Gson().fromJson(req.getReader(), JsonObject.class);
+        String namePrefix = data.get("name").getAsString();
+        if (!namePrefix.isEmpty()) {
+            String races = objectMapper.writeValueAsString(raceService.getMatching(namePrefix));
+            resp.getWriter().write(races);
+        } else {
+            String races = objectMapper.writeValueAsString(raceService.getAll());
+            resp.getWriter().write(races);
+        }
     }
 }
 

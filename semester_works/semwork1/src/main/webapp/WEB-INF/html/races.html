@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>D&D Races</title>
+    <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<script>
+
+    function renderTable(entities, table) {
+        let entityTable = '';
+
+        for (let i = 0; i < entities.length; i++) {
+            entityTable += '<tr style="border-bottom:1px solid black">';
+            entityTable += '  <td style="padding-top:15px; padding-bottom:15px">';
+            entityTable += '    <h3>' + entities[i]['name'] + '</h3>';
+            entityTable += '    <p>' + entities[i]['description'] + '</p>';
+            entityTable += '    <p>' + entities[i]['ability'] + '</p>';
+            entityTable += '    <p>Size: ' + entities[i]['size'] + '</p>';
+            entityTable += '    <p>Base speed: ' + entities[i]['speed'] + ' ft.</p>';
+            entityTable += '    <p>Darkvision: ' + entities[i]['hasDarkvision'] + '</p>';
+            entityTable += '</td>';
+            entityTable += '</tr>';
+        }
+
+        table.html(entityTable);
+    }
+
+    function getEntities(name) {
+
+        let data = {
+            "name": name,
+        };
+
+        $.ajax({
+            type: "POST",
+            url: "/races",
+            data: JSON.stringify(data),
+            success: function (response) {
+                renderTable(response, $('#entities'))
+            },
+            error: function (errmsg) {
+                alert(errmsg.responseText);
+            },
+            dataType: "json",
+            contentType: "application/json"
+        });
+    }
+
+    $(document).ready(getEntities(''));
+</script>
+<div>
+    <input type="text" id="name" onkeyup="getEntities($('#name').val())">
+    <span id="counter"></span>
+</div>
+<table id="entities" style="border-collapse: collapse">
+</table>
+</body>
+</html>
