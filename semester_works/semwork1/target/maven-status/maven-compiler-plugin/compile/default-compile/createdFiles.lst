@@ -22,6 +22,8 @@ ru\itis\services\TrinketByRollService.class
 ru\itis\dto\UserDto.class
 ru\itis\models\DndEntity.class
 ru\itis\services\RollHistService.class
+ru\itis\services\LogoutService.class
+ru\itis\services\LogoutServiceImpl.class
 ru\itis\services\DndEntityServiceImpl.class
 ru\itis\services\SignInService.class
 ru\itis\services\FileEncodeService.class

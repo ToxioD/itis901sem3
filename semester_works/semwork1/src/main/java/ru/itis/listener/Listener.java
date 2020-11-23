@@ -50,6 +50,7 @@ public class Listener implements ServletContextListener {
         //services
         SignUpService signUpService = new SignUpServiceImpl(usersRepository, passwordEncoder);
         SignInService signInService = new SignInServiceImpl(usersRepository, passwordEncoder);
+        LogoutService logoutService = new LogoutServiceImpl();
         RollService rollService = new RollServiceImpl();
         RollService rollUniqueService = new RollUniqueServiceImpl();
         RollHistService historyService = new RollHistServiceImpl(historyRepository);
@@ -62,6 +63,7 @@ public class Listener implements ServletContextListener {
         //adding services to context
         servletContext.setAttribute("signUpService", signUpService);
         servletContext.setAttribute("signInService", signInService);
+        servletContext.setAttribute("logoutService", logoutService);
         servletContext.setAttribute("rollService", rollService);
         servletContext.setAttribute("rollUniqueService", rollUniqueService);
         servletContext.setAttribute("historyService", historyService);
