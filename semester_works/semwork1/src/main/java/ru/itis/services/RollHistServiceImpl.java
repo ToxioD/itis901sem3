@@ -3,6 +3,7 @@ package ru.itis.services;
 import ru.itis.models.Roll;
 import ru.itis.repositories.RollHistRepository;
 
+import java.util.Collections;
 import java.util.List;
 
 public class RollHistServiceImpl implements RollHistService {
@@ -22,5 +23,12 @@ public class RollHistServiceImpl implements RollHistService {
         Roll newRoll = rolls.get(rolls.size()-1);
         newRoll.setUserId(userId);
         historyRepository.save(newRoll);
+    }
+
+    @Override
+    public List<Roll> getRollHistory(Long userId) {
+        List<Roll> rolls = historyRepository.findAllByUserId(userId);
+        Collections.reverse(rolls);
+        return rolls;
     }
 }

@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface RollHistService {
     void updateRollHistory(Long userId, List<Roll> rolls);
+    List<Roll> getRollHistory(Long userId);
 }
