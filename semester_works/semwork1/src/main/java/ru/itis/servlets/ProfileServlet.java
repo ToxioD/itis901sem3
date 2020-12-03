@@ -33,6 +33,7 @@ public class ProfileServlet extends HttpServlet {
         UserDto udto = (UserDto) req.getSession().getAttribute("user");
         req.setAttribute("firstName", udto.getFirstName());
         req.setAttribute("lastName", udto.getLastName());
+        req.setAttribute("email", udto.getEmail());
 
         List<Roll> rolls = rollHistService.getRollHistory(udto.getId());
         req.setAttribute("rolls", rolls);
