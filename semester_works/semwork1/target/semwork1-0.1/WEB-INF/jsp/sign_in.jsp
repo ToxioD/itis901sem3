@@ -68,11 +68,6 @@
             </div>
         </div>
     </div>
-        <ul>
-            <c:forEach items="${errors}" var="error">
-                <li>${error.getMessage()}</li>
-            </c:forEach>
-        </ul>
 </div>
 </div>
 </body>
