@@ -31,7 +31,11 @@ public class AuthenticationFilter implements Filter {
         Boolean sessionExists = session != null;
         // идет ли запрос на страницу входа или регистрации?
         Boolean isRequestOnOpenPage = request.getRequestURI().equals("/signIn") ||
-                request.getRequestURI().equals("/signUp") || request.getRequestURI().equals("/home");
+                request.getRequestURI().equals("/signUp");
+        // идет ли запрос на домашнюю страницу
+        Boolean isRequestOnHomePage = request.getRequestURI().equals("/home");
+        // идет ли запрос на пустую страницу
+        Boolean isRequestOnEmptyPage = request.getRequestURI().equals("/");
 
         // если сессия есть
         if (sessionExists) {
@@ -40,16 +44,19 @@ public class AuthenticationFilter implements Filter {
         }
 
         // если авторизован и запрашивает не открытую страницу или если не авторизован и запрашивает открытую
-        if (isAuthenticated && !isRequestOnOpenPage || !isAuthenticated && isRequestOnOpenPage) {
+        if (isAuthenticated && !isRequestOnOpenPage || !isAuthenticated && isRequestOnOpenPage || isRequestOnHomePage) {
             // отдаем ему то, что он хочет
             filterChain.doFilter(request, response);
         } else if (isAuthenticated && isRequestOnOpenPage) {
             // пользователь аутенцифицирован и запрашивает страницу входа
             // - отдаем ему профиль
             response.sendRedirect("/profile");
+        } else if (isRequestOnEmptyPage) {
+            // если пользователь вошел в корень сайта, отдаем ему домашнюю страницу
+            response.sendRedirect("/home");
         } else {
             // если пользователь не аутенцицицирован и запрашивает другие страницы
-            response.sendRedirect("/home");
+            response.sendRedirect("/signIn");
         }
 
     }
