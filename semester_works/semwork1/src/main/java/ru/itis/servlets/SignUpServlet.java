@@ -52,7 +52,7 @@ public class SignUpServlet extends HttpServlet {
             req.getRequestDispatcher("/WEB-INF/jsp/sign_up.jsp").forward(req, resp);
         } else {
             signUpService.signUp(form);
-            resp.sendRedirect("/signUp"); // location=/signUp
+            resp.sendRedirect("/signIn");
         }
     }
 }
