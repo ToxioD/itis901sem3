@@ -32,7 +32,7 @@ This project contains website with following features:
 
 ## Links
 
-- [Repository](https://github.com/your/awesome-project/)
+- [Repository](https://github.com/ToxioD/itis901sem3/tree/master/semester_works/semwork1)
 - Related projects:
   - [Skeleton](https://gitlab.com/MarselSidikov/11-901/-/tree/master/Themes/05.%20Skeleton) by Sidikov Marsel
   - [HTML Servlet](https://gitlab.com/MarselSidikov/11-901/-/tree/master/Themes/04.%20Html%20Servlet) by Sidikov Marsel
