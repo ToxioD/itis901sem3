@@ -43,6 +43,6 @@ public class ProfileServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         logoutService.logout(req.getSession());
-        resp.sendRedirect("/signIn");
+        resp.sendRedirect("/home");
     }
 }
