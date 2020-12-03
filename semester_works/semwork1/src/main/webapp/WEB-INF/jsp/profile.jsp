@@ -24,8 +24,8 @@
     </a>
 
     <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-            <a class="nav-link text-white" href="/home">Home</a>
+        <li class="nav-item">
+            <a class="nav-link text-light" href="/home">Home</a>
         </li>
         <li class="nav-item">
             <a class="nav-link text-light" href="/roll">Dice Roller</a>
@@ -50,8 +50,8 @@
     </ul>
 
     <ul class="navbar-nav my-2 my-lg-0">
-        <li class="nav-item">
-            <a class="nav-link text-light" href="/profile">Profile</a>
+        <li class="nav-item active">
+            <a class="nav-link text-white" href="/profile">Profile</a>
         </li>
     </ul>
 
