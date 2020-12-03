@@ -7,13 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b17f35fe-6aa5-4021-8d0b-5ae2157a9604" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/servlets/ProfileServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/servlets/ProfileServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/servlets/ProfileServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/itis/servlets/ProfileServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/semwork1-0.1.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/semwork1-0.1.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/classes/ru/itis/servlets/ProfileServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/semwork1-0.1/WEB-INF/classes/ru/itis/servlets/ProfileServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -293,7 +287,7 @@
       <workItem from="1606074027076" duration="10512000" />
       <workItem from="1606153739694" duration="7381000" />
       <workItem from="1606767625656" duration="2079000" />
-      <workItem from="1607029057632" duration="6832000" />
+      <workItem from="1607029057632" duration="7028000" />
     </task>
     <servers />
   </component>
