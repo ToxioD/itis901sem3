@@ -3,30 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>D&D Races</title>
-    <script
-            src="https://code.jquery.com/jquery-3.5.1.js"
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
             integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
             crossorigin="anonymous"></script>
 </head>
 <body>
 <script>
 
     function renderTable(entities, table) {
-        let entityTable = '';
+        let entityTable = '<tbody>';
 
         for (let i = 0; i < entities.length; i++) {
-            entityTable += '<tr style="border-bottom:1px solid black">';
-            entityTable += '  <td style="padding-top:15px; padding-bottom:15px">';
+            entityTable += '<tr>';
+            entityTable += '  <td>';
             entityTable += '    <h3>' + entities[i]['name'] + '</h3>';
             entityTable += '    <p>' + entities[i]['description'] + '</p>';
             entityTable += '    <p>' + entities[i]['ability'] + '</p>';
             entityTable += '    <p>Size: ' + entities[i]['size'] + '</p>';
             entityTable += '    <p>Base speed: ' + entities[i]['speed'] + ' ft.</p>';
-            entityTable += '    <p>Darkvision: ' + entities[i]['hasDarkvision'] + '</p>';
+            entityTable += '    <label for="blankCheckbox" class="mr-1">Darkvision: </label><input class="checkbox"' +
+                'type="checkbox" id="blankCheckbox" value="" disabled ';
+            if (entities[i]['hasDarkvision']) {
+                entityTable += 'checked';
+            }
+            entityTable += '>';
             entityTable += '</td>';
             entityTable += '</tr>';
         }
 
+        entityTable += '</tbody>';
         table.html(entityTable);
     }
 
@@ -53,11 +66,55 @@
 
     $(document).ready(getEntities(''));
 </script>
-<div>
-    <input type="text" id="name" onkeyup="getEntities($('#name').val())">
-    <span id="counter"></span>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+
+    <a class="navbar-brand" href="/home">
+        <img src="https://i.pinimg.com/originals/69/44/f8/6944f8b93dc32ec7e894a04051b7d2f1.png"
+             width="30" height="30" alt="" loading="lazy">
+    </a>
+
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link text-light" href="/home">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-light" href="/roll">Dice Roller</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-light" href="/trinkets">Trinket Generator</a>
+        </li>
+        <li class="nav-item active dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                D&D Core
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/classes">Classes</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item disabled font-italic" href="/races">Races</a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-light" href="/gallery">Picture Gallery</a>
+        </li>
+    </ul>
+
+    <ul class="navbar-nav my-2 my-lg-0">
+        <li class="nav-item">
+            <a class="nav-link text-light" href="/profile">Profile</a>
+        </li>
+    </ul>
+
+</nav>
+
+<div class="vw-auto min-vh-100 bg-light py-2">
+    <div class="pg-inline mx-3 mt-3 my-lg-0 p-3 bg-white border" style="border-radius:20px">
+        <div>
+            <input type="text" class="form-control" id="name" placeholder="Start typing something..." onkeyup="getEntities($('#name').val())">
+        </div>
+        <table id="entities" class="table table-striped">
+        </table>
+    </div>
 </div>
-<table id="entities" style="border-collapse: collapse">
-</table>
 </body>
 </html>

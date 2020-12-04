@@ -30,11 +30,11 @@
     </ul>
 
     <ul class="navbar-nav my-2 my-lg-0">
-        <li class="nav-item active">
-            <a class="nav-link text-white" href="/signIn">Sign In</a>
-        </li>
         <li class="nav-item">
-            <a class="nav-link text-light" href="/signUp">Sign Up</a>
+            <a class="nav-link text-light" href="/signIn">Sign In</a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link text-white" href="/signUp">Sign Up</a>
         </li>
     </ul>
 
