@@ -49,22 +49,22 @@
                         <div class="form-group">
                             <div class="row justify-content-center pb-2">
                                 <div class="col-md-auto">
-                                    <input type="email" name="email" placeholder="Email">
+                                    <input type="email" class="form-control" name="email" placeholder="Email">
                                 </div>
                             </div>
                             <div class="row justify-content-center pb-2">
                                 <div class="col-md-auto">
-                                    <input type="text" name="firstName" placeholder="First Name">
+                                    <input type="text" class="form-control" name="firstName" placeholder="First Name">
                                 </div>
                             </div>
                             <div class="row justify-content-center pb-2">
                                 <div class="col-md-auto">
-                                    <input type="text" name="lastName" placeholder="Last Name">
+                                    <input type="text" class="form-control" name="lastName" placeholder="Last Name">
                                 </div>
                             </div>
                             <div class="row justify-content-center pb-2">
                                 <div class="col-md-auto">
-                                    <input type="password" name="password" placeholder="Password">
+                                    <input type="password" class="form-control" name="password" placeholder="Password">
                                 </div>
                             </div>
                             <div class="row justify-content-center pb-2">
