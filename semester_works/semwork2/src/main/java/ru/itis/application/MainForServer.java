@@ -1,4 +1,6 @@
-package ru.itis.sockets;
+package ru.itis.application;
+
+import ru.itis.sockets.EchoServerSocket;
 
 public class MainForServer {
     public static void main(String[] args) {
