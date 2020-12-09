@@ -1,42 +1,65 @@
-package ru.itis;
+package ru.itis.sockets;
 
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-/**
- * 30.11.2020
- * 07. Sockets
- *
- * @author Sidikov Marsel (First Software Engineering Platform)
- * @version v1.0
- */
 public class EchoServerSocket {
 
-    // два клиента, сообщение от первого клиента должно уходить второму клиенту
-    // сообщение от второго клиента должно уходить первому
     public void start(int port) {
-        ServerSocket server;
+        ServerSocket socket;
+        UserThread user1;
+        UserThread user2;
 
         try {
-            server = new ServerSocket(port);
-            // уводит приложение в ожидание, пока не подключится клиент
-            // как только клиент подключился, поток продолжает выполнение и помещает
-            // "клиента" в client
-            Socket client = server.accept();
+            socket = new ServerSocket(port);
+            Socket firstClient = socket.accept();
+            Socket secondClient = socket.accept();
 
-            // читаем сообщения от клиента
-            BufferedReader fromClient = new BufferedReader(new InputStreamReader(client.getInputStream()));
-            PrintWriter toClient = new PrintWriter(client.getOutputStream(), true);
+            user1 = new UserThread("User 1",
+                    new BufferedReader(new InputStreamReader(firstClient.getInputStream())),
+                    new PrintWriter(secondClient.getOutputStream(), true));
 
-            String messageFromClient = fromClient.readLine();
-            while (messageFromClient != null) {
-                System.out.println("Message from client: " + messageFromClient);
-                toClient.println("Message from server: " + messageFromClient);
-                messageFromClient = fromClient.readLine();
-            }
+            user2 = new UserThread("User 2",
+                    new BufferedReader(new InputStreamReader(secondClient.getInputStream())),
+                    new PrintWriter(firstClient.getOutputStream(), true));
+
         } catch (IOException e) {
             throw new IllegalStateException(e);
         }
+    }
+
+    private class UserThread implements Runnable {
+        Thread t;
+        BufferedReader from;
+        PrintWriter to;
+
+        UserThread(String name, BufferedReader from, PrintWriter to) {
+            t = new Thread(this, name);
+            this.from = from;
+            this.to = to;
+            t.start();
+        }
+
+        public void run() {
+            try {
+                System.out.println(t.getName() + " connected and running");
+                while (true) {
+                    String message = from.readLine();
+                    if (message != null) {
+                        System.out.println("Message from " + t.getName() + ": " + message);
+                        to.println("Message from " + t.getName() + ": " + message);
+                    }
+                    try {
+                        Thread.sleep(10);
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+            } catch (IOException e) {
+                throw new IllegalStateException(e);
+            }
+        }
+
     }
 }
