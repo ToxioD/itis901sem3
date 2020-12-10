@@ -1,11 +1,14 @@
 package ru.itis.application;
 
 import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import ru.itis.controllers.MainController;
+import javafx.stage.WindowEvent;
+import ru.itis.controllers.ChatController;
 
 public class Main extends Application {
     public static void main(String[] args) {
@@ -14,7 +17,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        String fxmlFile = "/fxml/Main.fxml";
+        String fxmlFile = "/fxml/Chat.fxml";
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlFile));
         Parent root = fxmlLoader.load();
         stage.setScene(new Scene(root));
@@ -22,9 +25,9 @@ public class Main extends Application {
         stage.setResizable(false);
 
         Scene scene = stage.getScene();
-        MainController controller = fxmlLoader.getController();
-        scene.setOnKeyPressed(controller.keyEventEventHandler);
-
+        ChatController controller = fxmlLoader.getController();
+        controller.setStage((Stage) scene.getWindow());
+        //scene.setOnKeyPressed(controller.keyEventEventHandler);
         stage.show();
     }
 }

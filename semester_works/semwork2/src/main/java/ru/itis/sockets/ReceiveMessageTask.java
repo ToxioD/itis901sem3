@@ -2,21 +2,19 @@ package ru.itis.sockets;
 
 import javafx.application.Platform;
 import javafx.concurrent.Task;
-import ru.itis.controllers.MainController;
+import ru.itis.controllers.ChatController;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.net.Socket;
 
 public class ReceiveMessageTask extends Task<Void> {
     private BufferedReader fromServer;
-    private MainController controller;
+    private ChatController controller;
 
-    public ReceiveMessageTask(BufferedReader fromServer, MainController controller) {
+    public ReceiveMessageTask(BufferedReader fromServer, ChatController controller) {
         this.fromServer = fromServer;
         this.controller = controller;
+        Platform.runLater(() -> controller.scrollPane.vvalueProperty().bind(controller.chatPane.heightProperty()));
     }
 
     @Override
@@ -25,7 +23,20 @@ public class ReceiveMessageTask extends Task<Void> {
             try {
                 String messageFromServer = fromServer.readLine();
                 if (messageFromServer != null) {
-                    Platform.runLater(() -> controller.helloLabel.setText(messageFromServer));
+                    if (messageFromServer.equals("ready")) {
+                        Platform.runLater(() -> controller.readyCheck.setSelected(true));
+                        controller.playerReady();
+                    } else if (messageFromServer.equals("disable")) {
+                        Platform.runLater(() -> controller.readyButton.setDisable(true));
+                        controller.playerReady();
+                    } else {
+                        Platform.runLater(() -> controller.helloLabel.setPrefHeight(
+                                controller.helloLabel.getPrefHeight() + 17));
+                        Platform.runLater(() -> controller.helloLabel.setText(controller.helloLabel.getText() + "\n"
+                                + messageFromServer));
+                        Platform.runLater(() -> controller.chatPane.setPrefHeight(
+                                controller.helloLabel.getPrefHeight() + 14));
+                    }
                 }
             } catch (IOException e) {
                 throw new IllegalStateException(e);

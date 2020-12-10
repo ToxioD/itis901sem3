@@ -23,7 +23,15 @@ public class SocketClient {
     }
 
     public void sendMessage(String message) {
-        toServer.println(message);
+        toServer.println(": " + message);
+    }
+
+    public void pingServer() {
+        toServer.println("ping");
+    }
+
+    public void setReady() {
+        toServer.println("ready");
     }
 
     public BufferedReader getFromServer() {
