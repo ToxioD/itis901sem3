@@ -84,12 +84,8 @@ public class ChatController implements Initializable {
         client.pingServer();
         service.execute(receiveMessageTask);
 
-        sendButton.setOnAction(event -> {
-            client.sendMessage(messagesTextField.getText());
-        });
-        readyButton.setOnAction(event -> {
-            client.setReady();
-        });
+        sendButton.setOnAction(event -> client.sendMessage(messagesTextField.getText()));
+        readyButton.setOnAction(event -> client.setReady());
     }
 
     public void setStage(Stage stage) {
@@ -98,10 +94,10 @@ public class ChatController implements Initializable {
 
     public void playerReady() {
         readyCount++;
-        if (readyCount == 2) stop();
+        if (readyCount == 2) shutdown();
     }
 
-    private void stop() {
+    private void shutdown() {
         System.out.println("Closing stage");
         service.shutdownNow();
         Platform.exit();
