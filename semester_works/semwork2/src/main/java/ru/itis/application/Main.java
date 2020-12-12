@@ -6,9 +6,15 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import ru.itis.controllers.ChatController;
+import ru.itis.controllers.MainController;
+import ru.itis.controllers.SetupController;
+import ru.itis.utils.ScreenNavigator;
+
+import java.io.IOException;
 
 public class Main extends Application {
     public static void main(String[] args) {
@@ -17,17 +23,29 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        String fxmlFile = "/fxml/Chat.fxml";
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlFile));
-        Parent root = fxmlLoader.load();
-        stage.setScene(new Scene(root));
         stage.setTitle("11-901");
-        stage.setResizable(false);
-
-        Scene scene = stage.getScene();
-        ChatController controller = fxmlLoader.getController();
-        controller.setStage((Stage) scene.getWindow());
-        //scene.setOnKeyPressed(controller.keyEventEventHandler);
+        stage.setScene(
+                new Scene(
+                        loadMainPane()
+                )
+        );
         stage.show();
+    }
+
+    private Pane loadMainPane() throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+
+        Pane mainPane = (Pane) loader.load(
+                getClass().getResourceAsStream(
+                        ScreenNavigator.MAIN
+                )
+        );
+
+        MainController mainController = loader.getController();
+
+        ScreenNavigator.setMainController(mainController);
+        ScreenNavigator.loadScreen(ScreenNavigator.CHAT);
+
+        return mainPane;
     }
 }
