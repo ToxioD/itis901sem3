@@ -1,31 +1,21 @@
 package ru.itis.controllers;
 
 import javafx.application.Platform;
-import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import ru.itis.application.Main;
-import ru.itis.sockets.ChangeScreenTask;
 import ru.itis.sockets.CheckConnectionTask;
 import ru.itis.sockets.ReceiveMessageTask;
 import ru.itis.sockets.SocketClient;
-import ru.itis.utils.ScreenNavigator;
 
-import java.awt.*;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.Timer;
-import java.util.TimerTask;
 import java.util.concurrent.*;
 
 public class ChatController implements Initializable {

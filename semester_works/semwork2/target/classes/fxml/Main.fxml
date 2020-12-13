@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?scenebuilder-stylesheet vista.css?>
+
+<VBox prefHeight="200.0" prefWidth="300.0" xmlns:fx="http://javafx.com/fxml" fx:controller="ru.itis.controllers.MainController">
+    <children>
+        <AnchorPane fx:id="screenHolder" VBox.vgrow="ALWAYS" />
+    </children>
+</VBox>
