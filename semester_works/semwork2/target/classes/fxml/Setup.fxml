@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.ImageView?>
@@ -7,10 +8,10 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="pane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.itis.controllers.SetupController">
+<AnchorPane fx:id="pane" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/setup.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.itis.controllers.SetupController">
    <children>
       <Button fx:id="refreshButton" layoutX="268.0" layoutY="93.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="65.0" />
-      <Pane fx:id="buffPane" layoutX="68.0" layoutY="25.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: green; -fx-background-color: lightgray; -fx-background-radius: 10; -fx-border-radius: 10;">
+      <Pane fx:id="buffPane" layoutX="68.0" layoutY="25.0" prefHeight="200.0" prefWidth="200.0">
          <children>
             <ImageView fx:id="buffImage" fitHeight="100.0" fitWidth="100.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
             <Label layoutX="127.0" layoutY="14.0" text="Cost:">
@@ -24,8 +25,12 @@
                   <Font size="24.0" />
                </font>
             </Label>
-         </children></Pane>
-      <Pane fx:id="debuffPane" layoutX="333.0" layoutY="25.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: red; -fx-background-color: lightgray; -fx-background-radius: 10; -fx-border-radius: 10;">
+         </children>
+         <styleClass>
+            <String fx:value="pane" />
+            <String fx:value="buff" />
+         </styleClass></Pane>
+      <Pane fx:id="debuffPane" layoutX="333.0" layoutY="25.0" prefHeight="200.0" prefWidth="200.0">
          <children>
             <ImageView fx:id="debuffImage" fitHeight="100.0" fitWidth="100.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
             <Label layoutX="127.0" layoutY="14.0" text="Cost:">
@@ -39,8 +44,12 @@
                   <Font size="24.0" />
                </font>
             </Label>
-         </children></Pane>
-      <Button fx:id="submitButton" layoutX="201.0" layoutY="276.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="136.0" text="Pick this one" />
+         </children>
+         <styleClass>
+            <String fx:value="pane" />
+            <String fx:value="debuff" />
+         </styleClass></Pane>
+      <Button fx:id="submitButton" disable="true" layoutX="201.0" layoutY="276.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="136.0" text="Pick this one" />
       <Pane layoutX="337.0" layoutY="276.0" prefHeight="65.0" prefWidth="65.0" style="-fx-background-color: gold; -fx-border-color: black;">
          <children>
             <Label fx:id="goldLabel" alignment="CENTER" layoutX="4.0" layoutY="6.0" prefHeight="36.0" prefWidth="57.0" text="10">

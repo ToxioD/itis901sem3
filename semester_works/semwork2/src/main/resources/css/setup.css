@@ -1,0 +1,17 @@
+.pane {
+-fx-background-color: lightgray;
+-fx-background-radius: 10;
+-fx-border-radius: 10;
+}
+
+.buff {
+-fx-border-color: green;
+}
+
+.debuff {
+-fx-border-color: red;
+}
+
+.pane:chosen {
+-fx-background-color: silver;
+}

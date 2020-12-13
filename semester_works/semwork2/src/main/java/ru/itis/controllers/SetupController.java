@@ -1,5 +1,6 @@
 package ru.itis.controllers;
 
+import javafx.css.PseudoClass;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -61,12 +62,17 @@ public class SetupController implements Initializable {
         Image naoto = new Image("/img/naoto.jpg",400, 400, false, true);
         buffImage.setImage(naoto);
 
-        //test pane press
-        buffPane.setOnMouseClicked(event -> buffPane.setStyle("-fx-background-color: silver"));
-        debuffPane.setOnMouseClicked(event -> debuffPane.setStyle("-fx-background-color: silver"));
+        buffPane.setOnMouseClicked(event -> choose(true));
+        debuffPane.setOnMouseClicked(event -> choose(false));
 
         //test value insertion
         goldLabel.setText("5");
+    }
+
+    private void choose(Boolean isBuff) {
+        buffPane.pseudoClassStateChanged(PseudoClass.getPseudoClass("chosen"), isBuff);
+        debuffPane.pseudoClassStateChanged(PseudoClass.getPseudoClass("chosen"), !isBuff);
+        submitButton.setDisable(false);
     }
 
     public void setStage(Stage stage) {
