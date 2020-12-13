@@ -20,11 +20,10 @@
             </AnchorPane>
         </content>
       </ScrollPane>
-      <Button fx:id="readyButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="109.0" text="Ready" />
+      <Button fx:id="readyButton" disable="true" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="109.0" text="Ready" visible="false" />
       <CheckBox fx:id="readyCheck" disable="true" layoutX="455.0" layoutY="18.0" mnemonicParsing="false" />
       <CheckBox fx:id="connectedCheck" disable="true" layoutX="279.0" layoutY="18.0" mnemonicParsing="false" />
       <Label layoutX="476.0" layoutY="18.0" text="Other player is ready" />
       <Label layoutX="300.0" layoutY="18.0" text="Other player connected" />
-      <Button fx:id="startButton" disable="true" layoutX="136.0" layoutY="14.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="132.0" text="Start game" visible="false" />
    </children>
 </AnchorPane>

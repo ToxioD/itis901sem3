@@ -24,6 +24,8 @@ public class CheckConnectionTask implements Callable<Boolean> {
                 String messageFromServer = fromServer.readLine();
                 if (messageFromServer.equals("ping")) {
                     Platform.runLater(() -> controller.connectedCheck.setSelected(true));
+                    Platform.runLater(() -> controller.readyButton.setVisible(true));
+                    Platform.runLater(() -> controller.readyButton.setDisable(false));
                     return true;
                 }
             } catch (IOException e) {

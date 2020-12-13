@@ -52,9 +52,6 @@ public class ChatController implements Initializable {
     @FXML
     public CheckBox readyCheck;
 
-    @FXML
-    public Button startButton;
-
     /*public EventHandler<KeyEvent> keyEventEventHandler = event -> {
         if (event.getCode() == KeyCode.LEFT) {
             player.setLayoutX(player.getLayoutX() - 5);
@@ -92,10 +89,6 @@ public class ChatController implements Initializable {
 
         sendButton.setOnAction(event -> client.sendMessage(messagesTextField.getText()));
         readyButton.setOnAction(event -> client.setReady());
-        startButton.setOnAction(event -> {
-            service.shutdownNow();
-            ScreenNavigator.loadScreen(ScreenNavigator.SETUP);
-        });
     }
 
     public void setStage(Stage stage) {
@@ -104,10 +97,7 @@ public class ChatController implements Initializable {
 
     public void playerReady() {
         readyCount++;
-        if (readyCount == 2) {
-            startButton.setDisable(false);
-            startButton.setVisible(true);
-        }
+        if (readyCount == 2) Platform.runLater(() -> ScreenNavigator.loadScreen(ScreenNavigator.SETUP));
     }
 
     public void shutdown() {
