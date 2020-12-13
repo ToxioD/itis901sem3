@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 import ru.itis.sockets.CheckConnectionTask;
 import ru.itis.sockets.ReceiveMessageTask;
 import ru.itis.sockets.SocketClient;
+import ru.itis.utils.ScreenNavigator;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -51,6 +52,9 @@ public class ChatController implements Initializable {
     @FXML
     public CheckBox readyCheck;
 
+    @FXML
+    public Button startButton;
+
     /*public EventHandler<KeyEvent> keyEventEventHandler = event -> {
         if (event.getCode() == KeyCode.LEFT) {
             player.setLayoutX(player.getLayoutX() - 5);
@@ -88,6 +92,7 @@ public class ChatController implements Initializable {
 
         sendButton.setOnAction(event -> client.sendMessage(messagesTextField.getText()));
         readyButton.setOnAction(event -> client.setReady());
+        startButton.setOnAction(event -> ScreenNavigator.loadScreen(ScreenNavigator.SETUP));
     }
 
     public void setStage(Stage stage) {
@@ -96,7 +101,10 @@ public class ChatController implements Initializable {
 
     public void playerReady() {
         readyCount++;
-        if (readyCount == 2) shutdown();
+        if (readyCount == 2) {
+            startButton.setDisable(false);
+            startButton.setVisible(true);
+        }
     }
 
     public void shutdown() {
