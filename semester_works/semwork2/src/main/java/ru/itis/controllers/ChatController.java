@@ -78,7 +78,7 @@ public class ChatController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         readyCount = 0;
 
-        SocketClient client = new SocketClient("localhost", 7777);
+        SocketClient client = MainController.getClient();
         CheckConnectionTask checkConnectionTask = new CheckConnectionTask(client.getFromServer(), this);
         ReceiveMessageTask receiveMessageTask = new ReceiveMessageTask(client.getFromServer(), this);
         service = Executors.newFixedThreadPool(1);
