@@ -19,7 +19,6 @@ public class ScreenNavigator {
 
     public static void loadScreen(String fxml) {
         try {
-            System.out.println("Changing...");
             mainController.setScreen(
                     FXMLLoader.load(
                             ScreenNavigator.class.getResource(
@@ -27,7 +26,6 @@ public class ScreenNavigator {
                             )
                     )
             );
-            System.out.println("Screen loaded");
         } catch (IOException e) {
             throw new IllegalStateException(e);
         }

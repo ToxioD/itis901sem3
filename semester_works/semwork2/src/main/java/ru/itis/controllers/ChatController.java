@@ -92,7 +92,10 @@ public class ChatController implements Initializable {
 
         sendButton.setOnAction(event -> client.sendMessage(messagesTextField.getText()));
         readyButton.setOnAction(event -> client.setReady());
-        startButton.setOnAction(event -> ScreenNavigator.loadScreen(ScreenNavigator.SETUP));
+        startButton.setOnAction(event -> {
+            service.shutdownNow();
+            ScreenNavigator.loadScreen(ScreenNavigator.SETUP);
+        });
     }
 
     public void setStage(Stage stage) {

@@ -2,7 +2,13 @@ package ru.itis.controllers;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -13,11 +19,54 @@ public class SetupController implements Initializable {
     private Stage stage;
 
     @FXML
-    private Button testButton;
+    private Pane buffPane;
+
+    @FXML
+    private Label buffCost;
+
+    @FXML
+    private Label buffEffect;
+
+    @FXML
+    private ImageView buffImage;
+
+    @FXML
+    private Pane debuffPane;
+
+    @FXML
+    private Label debuffCost;
+
+    @FXML
+    private Label debuffEffect;
+
+    @FXML
+    private ImageView debuffImage;
+
+    @FXML
+    private Button refreshButton;
+
+    @FXML
+    private Label goldLabel;
+
+    @FXML
+    private Button submitButton;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        testButton.setOnAction(event -> System.out.println("Test button pressed"));
+        //test button press
+        refreshButton.setOnAction(event -> System.out.println("Refresh button pressed"));
+        submitButton.setOnAction(event -> System.out.println("Submit button pressed"));
+
+        //test image insertion
+        Image naoto = new Image("/img/naoto.jpg",400, 400, false, true);
+        buffImage.setImage(naoto);
+
+        //test pane press
+        buffPane.setOnMouseClicked(event -> buffPane.setStyle("-fx-background-color: silver"));
+        debuffPane.setOnMouseClicked(event -> debuffPane.setStyle("-fx-background-color: silver"));
+
+        //test value insertion
+        goldLabel.setText("5");
     }
 
     public void setStage(Stage stage) {

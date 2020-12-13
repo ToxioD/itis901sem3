@@ -5,11 +5,6 @@ import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
 import ru.itis.sockets.SocketClient;
 
-import java.net.Socket;
-import java.net.URL;
-import java.util.ResourceBundle;
-import java.util.concurrent.ExecutorService;
-
 public class MainController {
 
     private static SocketClient client = new SocketClient("localhost", 7777);
