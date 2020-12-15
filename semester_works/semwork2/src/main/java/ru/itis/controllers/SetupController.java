@@ -9,6 +9,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import ru.itis.utils.ScreenNavigator;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -52,9 +53,10 @@ public class SetupController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        submitButton.setOnAction(event -> ScreenNavigator.loadScreen(ScreenNavigator.WAIT));
+
         //test button press
         refreshButton.setOnAction(event -> System.out.println("Refresh button pressed"));
-        submitButton.setOnAction(event -> System.out.println("Submit button pressed"));
 
         //test image insertion
         Image naoto = new Image("/img/naoto.jpg",400, 400, false, true);
