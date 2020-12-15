@@ -7,11 +7,11 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="pane" prefHeight="400.0" prefWidth="624.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.itis.controllers.ChatController">
+<AnchorPane fx:id="pane" prefHeight="400.0" prefWidth="624.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.itis.controllers.ChatController">
    <children>
-      <Button fx:id="sendButton" layoutX="559.0" layoutY="353.0" mnemonicParsing="false" text="Send" />
+      <Button fx:id="sendButton" layoutX="559.0" layoutY="353.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="53.0" text="Send" />
       <TextField fx:id="messagesTextField" layoutX="14.0" layoutY="353.0" prefHeight="31.0" prefWidth="542.0" />
-      <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" layoutX="14.0" layoutY="52.0" prefHeight="297.0" prefWidth="599.0">
+      <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" layoutX="14.0" layoutY="52.0" prefHeight="297.0" prefWidth="599.0" style="-fx-background-color: lightgrey;">
         <content>
           <AnchorPane fx:id="chatPane" minHeight="0.0" minWidth="0.0" prefHeight="41.0" prefWidth="569.0" translateY="10.0">
                <children>
