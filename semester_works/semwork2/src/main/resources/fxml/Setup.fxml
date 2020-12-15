@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="pane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" stylesheets="@../css/setup.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.itis.controllers.SetupController">
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" stylesheets="@../css/setup.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.itis.controllers.SetupController">
    <children>
       <Button fx:id="refreshButton" layoutX="268.0" layoutY="93.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="65.0" />
       <Pane fx:id="buffPane" layoutX="68.0" layoutY="25.0" prefHeight="200.0" prefWidth="200.0">
