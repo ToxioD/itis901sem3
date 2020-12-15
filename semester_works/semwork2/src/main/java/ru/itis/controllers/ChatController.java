@@ -84,7 +84,6 @@ public class ChatController implements Initializable {
         ReceiveMessageTask receiveMessageTask = new ReceiveMessageTask(client.getFromServer(), this);
         service = Executors.newFixedThreadPool(1);
         service.submit(checkConnectionTask);
-        client.pingServer();
         service.execute(receiveMessageTask);
 
         sendButton.setOnAction(event -> client.sendMessage(messagesTextField.getText()));
@@ -97,7 +96,12 @@ public class ChatController implements Initializable {
 
     public void playerReady() {
         readyCount++;
-        if (readyCount == 2) Platform.runLater(() -> ScreenNavigator.loadScreen(ScreenNavigator.SETUP));
+        if (readyCount == 2) switchToSetup();
+    }
+
+    private void switchToSetup() {
+        service.shutdownNow();
+        Platform.runLater(() -> ScreenNavigator.loadScreen(ScreenNavigator.SETUP));
     }
 
     public void shutdown() {

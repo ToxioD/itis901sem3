@@ -66,7 +66,7 @@ public class SetupController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        submitButton.setOnAction(event -> ScreenNavigator.loadScreen(ScreenNavigator.CHAT));
+        submitButton.setOnAction(event -> Platform.runLater(() -> switchToWait()));
 
         //test button press
         refreshButton.setOnAction(event -> System.out.println("Refresh button pressed"));
@@ -82,7 +82,7 @@ public class SetupController implements Initializable {
         goldLabel.setText("5");
 
         service = Executors.newScheduledThreadPool(1);
-        service.schedule(() -> Platform.runLater(() -> ScreenNavigator.loadScreen(ScreenNavigator.WAIT)),
+        service.schedule(() -> switchToWait(),
                 30, TimeUnit.SECONDS);
 
         Timeline timer = new Timeline(new KeyFrame(Duration.millis(30), animation -> {
@@ -100,5 +100,10 @@ public class SetupController implements Initializable {
 
     public void setStage(Stage stage) {
         this.stage = stage;
+    }
+
+    private void switchToWait() {
+        service.shutdownNow();
+        Platform.runLater(() -> ScreenNavigator.loadScreen(ScreenNavigator.WAIT));
     }
 }
