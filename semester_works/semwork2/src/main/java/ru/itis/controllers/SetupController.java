@@ -14,6 +14,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import ru.itis.utils.CharacterMaintainer;
 import ru.itis.utils.ScreenNavigator;
 
 import java.net.URL;
@@ -66,6 +67,9 @@ public class SetupController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+        CharacterMaintainer maintainer = MainController.getCharacterMaintainer();
+
         submitButton.setOnAction(event -> switchToWait());
 
         //test button press
@@ -78,8 +82,7 @@ public class SetupController implements Initializable {
         buffPane.setOnMouseClicked(event -> choose(true));
         debuffPane.setOnMouseClicked(event -> choose(false));
 
-        //test value insertion
-        goldLabel.setText("5");
+        goldLabel.setText(maintainer.getAttribute("gold").orElse(0).toString());
 
         service = Executors.newScheduledThreadPool(1);
         service.schedule(() -> switchToWait(),
