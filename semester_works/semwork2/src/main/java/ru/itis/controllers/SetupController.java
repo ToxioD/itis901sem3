@@ -66,7 +66,7 @@ public class SetupController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        submitButton.setOnAction(event -> Platform.runLater(() -> switchToWait()));
+        submitButton.setOnAction(event -> switchToWait());
 
         //test button press
         refreshButton.setOnAction(event -> System.out.println("Refresh button pressed"));

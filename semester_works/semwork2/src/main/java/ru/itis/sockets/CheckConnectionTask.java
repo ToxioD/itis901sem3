@@ -26,6 +26,7 @@ public class CheckConnectionTask implements Callable<Boolean> {
                     Platform.runLater(() -> controller.connectedCheck.setSelected(true));
                     Platform.runLater(() -> controller.readyButton.setVisible(true));
                     Platform.runLater(() -> controller.readyButton.setDisable(false));
+                    Platform.runLater(() -> controller.sendButton.setDisable(false));
                     return true;
                 }
             } catch (IOException e) {

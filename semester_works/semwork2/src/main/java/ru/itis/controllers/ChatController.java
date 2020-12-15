@@ -29,7 +29,7 @@ public class ChatController implements Initializable {
     private ExecutorService service;
 
     @FXML
-    private Button sendButton;
+    public Button sendButton;
 
     @FXML
     public Button readyButton;
@@ -84,6 +84,7 @@ public class ChatController implements Initializable {
         ReceiveMessageTask receiveMessageTask = new ReceiveMessageTask(client.getFromServer(), this);
         service = Executors.newFixedThreadPool(1);
         service.submit(checkConnectionTask);
+        client.pingServer();
         service.execute(receiveMessageTask);
 
         sendButton.setOnAction(event -> client.sendMessage(messagesTextField.getText()));
