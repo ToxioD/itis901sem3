@@ -42,4 +42,12 @@ public class CharacterMaintainer {
             return Optional.empty();
         }
     }
+
+    public void setAttribute(String attrName, Integer value) throws Exception{
+        try {
+            player.getClass().getDeclaredField(attrName).set(player, value);
+        } catch (NoSuchFieldException e) {
+            throw new IllegalStateException(e);
+        }
+    }
 }

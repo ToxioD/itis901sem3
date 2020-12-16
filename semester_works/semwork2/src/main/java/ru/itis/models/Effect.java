@@ -9,9 +9,9 @@ import lombok.*;
 @EqualsAndHashCode
 @Builder
 public class Effect {
-    private Integer cost;
-    private String effectText;
-    private String effectTarget;
-    private Integer effectModifier;
-    private Boolean isPermanent;
+    public Integer cost;
+    public String effectText;
+    public String effectTarget;
+    public Integer effectModifier;
+    public Boolean isPermanent;
 }

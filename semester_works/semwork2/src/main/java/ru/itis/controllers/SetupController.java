@@ -19,7 +19,6 @@ import ru.itis.utils.ScreenNavigator;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -68,7 +67,7 @@ public class SetupController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        CharacterMaintainer maintainer = MainController.getCharacterMaintainer();
+        CharacterMaintainer maintainer = MainController.getPlayerMaintainer();
 
         submitButton.setOnAction(event -> switchToWait());
 

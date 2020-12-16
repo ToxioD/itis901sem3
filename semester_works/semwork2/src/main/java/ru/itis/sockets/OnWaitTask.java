@@ -1,8 +1,6 @@
 package ru.itis.sockets;
 
-import javafx.application.Platform;
 import javafx.concurrent.Task;
-import ru.itis.controllers.ChatController;
 import ru.itis.controllers.WaitController;
 
 import java.io.BufferedReader;

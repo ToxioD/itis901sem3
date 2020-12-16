@@ -9,7 +9,8 @@ import ru.itis.utils.CharacterMaintainer;
 public class MainController {
 
     private static SocketClient client = new SocketClient("localhost", 7777);
-    private static CharacterMaintainer characterMaintainer = new CharacterMaintainer();
+    private static CharacterMaintainer playerMaintainer = new CharacterMaintainer();
+    private static CharacterMaintainer enemyMaintainer = new CharacterMaintainer();
 
     @FXML
     private AnchorPane screenHolder;
@@ -22,8 +23,12 @@ public class MainController {
         return client;
     }
 
-    public static CharacterMaintainer getCharacterMaintainer() {
-        return characterMaintainer;
+    public static CharacterMaintainer getPlayerMaintainer() {
+        return playerMaintainer;
+    }
+
+    public static CharacterMaintainer getEnemyMaintainer() {
+        return enemyMaintainer;
     }
 
 }

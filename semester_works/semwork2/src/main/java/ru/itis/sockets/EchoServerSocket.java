@@ -51,16 +51,15 @@ public class EchoServerSocket {
                 while (true) {
                     String message = from.readLine();
                     if (message != null) {
-                        if (message.equals("ping")) {
-                            System.out.println("ping from " + t.getName());
-                            to.println("ping");
-                            System.out.println("sent");
-                        } else if (message.equals("ready")) {
+                        if (message.equals("ready")) {
                             self.println("disable");
                             to.println("ready");
-                        } else {
+                        } else if (message.startsWith(":")) {
                             self.println("Message from " + t.getName() + message);
                             to.println("Message from " + t.getName() + message);
+                        } else {
+                            System.out.println(t.getName() + " " + message);
+                            to.println(message);
                         }
                     }
                     try {

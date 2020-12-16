@@ -11,10 +11,10 @@ import java.util.List;
 @EqualsAndHashCode
 @Builder
 public class Character {
-    private Integer maxHp;
-    private Integer hp;
+    public Integer maxHp;
+    public Integer hp;
     public Integer gold;
-    private Integer hitChance;
-    private Integer damage;
-    private List<Effect> permanentEffects;
+    public Integer hitChance;
+    public Integer damage;
+    public List<Effect> permanentEffects;
 }
