@@ -31,11 +31,12 @@ public class ReceiveAttributesTask extends Task<Void> {
                         }
                     } else if (attribute[0].equals("damage")) {
                         Platform.runLater(() -> controller.dealDamageToSelf(Integer.parseInt(attribute[1])));
+                    } else if (attribute[0].equals("end")) {
                         this.cancel();
                     } else Platform.runLater(() -> controller.updateEnemyAttribute(attribute[0], Integer.parseInt(attribute[1])));
                 }
                 try {
-                    Thread.sleep(300);
+                    Thread.sleep(200);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }

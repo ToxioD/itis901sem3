@@ -66,6 +66,7 @@ public class BrawlController implements Initializable {
         service.schedule(receiveAttributesTask, 100, TimeUnit.MILLISECONDS);
         service.schedule(() -> Platform.runLater(() -> tryToHit()), 3, TimeUnit.SECONDS);
         service.schedule(() -> Platform.runLater(() -> dealDamage()), 5, TimeUnit.SECONDS);
+        service.schedule(() -> client.sendAttribute("end",0), 7, TimeUnit.SECONDS);
         service.schedule(() -> Platform.runLater(() -> switchToSetup()), 8, TimeUnit.SECONDS);
 
 
