@@ -97,6 +97,8 @@ public class BrawlController implements Initializable {
         try {
             playerMaintainer.setAttribute("hp",
                     playerMaintainer.getAttribute("hp").orElse(1) - damage);
+            playerMaintainer.setAttribute("gold",
+                    playerMaintainer.getAttribute("gold").orElse(0) + damage);
             enemyDamageLabel.setText(damage.toString());
             updatePlayerAttributes();
         } catch (Exception e) {
