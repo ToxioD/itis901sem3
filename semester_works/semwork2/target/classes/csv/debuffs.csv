@@ -1,0 +1,12 @@
+5,-15% hit chance,hitChance,-15,false,notarget1
+7,-20% hit chance,hitChance,-20,false,notarget2
+10,-25% hit chance,hitChance,-25,false,notarget3
+3,-2 damage,damage,-2,false,nosword1
+10,-5 damage,damage,-5,false,nosword2
+20,-10 damage,damage,-10,false,nosword3
+3,+1 poison,hp,-1,true,nopotion1
+5,+3 poison,hp,-3,true,nopotion2
+20,+5 poison,hp,-5,true,nopotion3
+4,-5 gold,gold,-5,false,nomoney1
+10,-5 gold income,gold,-5,true,nomoney2
+15,-7 gold income,gold,-7,true,nomoney3
