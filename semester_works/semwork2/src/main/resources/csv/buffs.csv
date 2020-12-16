@@ -1,0 +1,12 @@
+3,+10% hit chance,hitChance,10,false,target1
+5,+20% hit chance,hitChance,20,false,target2
+10,+30% hit chance,hitChance,20,false,target3
+5,+3 damage,damage,3,false,sword1
+10,+5 damage,damage,5,false,sword2
+15,+7 damage,damage,7,false,sword3
+3,+3 health,hp,3,false,potion1
+5,+5 health,hp,5,false,potion2
+20,+5 regeneration,hp,5,true,potion3
+1,+3 gold,gold,3,false,money1
+6,+3 gold income,gold,3,true,money2
+14,+7 gold income,gold,7,true,money3

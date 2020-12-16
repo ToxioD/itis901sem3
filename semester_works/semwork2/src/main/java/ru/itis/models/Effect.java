@@ -14,4 +14,5 @@ public class Effect {
     public String effectTarget;
     public Integer effectModifier;
     public Boolean isPermanent;
+    public String imageName;
 }
