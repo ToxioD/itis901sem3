@@ -5,12 +5,14 @@ import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
 import ru.itis.sockets.SocketClient;
 import ru.itis.utils.CharacterMaintainer;
+import ru.itis.utils.EffectNavigator;
 
 public class MainController {
 
     private static SocketClient client = new SocketClient("localhost", 7777);
     private static CharacterMaintainer playerMaintainer = new CharacterMaintainer();
     private static CharacterMaintainer enemyMaintainer = new CharacterMaintainer();
+    private static EffectNavigator effectNavigator = new EffectNavigator();
 
     @FXML
     private AnchorPane screenHolder;
@@ -29,6 +31,10 @@ public class MainController {
 
     public static CharacterMaintainer getEnemyMaintainer() {
         return enemyMaintainer;
+    }
+
+    public static EffectNavigator getEffectNavigator() {
+        return effectNavigator;
     }
 
 }

@@ -14,7 +14,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import ru.itis.models.Effect;
 import ru.itis.utils.CharacterMaintainer;
+import ru.itis.utils.EffectNavigator;
 import ru.itis.utils.ScreenNavigator;
 
 import java.net.URL;
@@ -27,6 +29,11 @@ public class SetupController implements Initializable {
 
     private Stage stage;
     private ScheduledExecutorService service;
+    private CharacterMaintainer maintainer;
+    private EffectNavigator effects;
+    private Effect buff;
+    private Effect debuff;
+    private Boolean isBuff;
 
     @FXML
     private Pane buffPane;
@@ -66,20 +73,23 @@ public class SetupController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        isBuff = false;
 
-        CharacterMaintainer maintainer = MainController.getPlayerMaintainer();
+        maintainer = MainController.getPlayerMaintainer();
+        effects = MainController.getEffectNavigator();
 
-        submitButton.setOnAction(event -> switchToWait());
+        Platform.runLater(() -> getPair());
 
-        //test button press
-        refreshButton.setOnAction(event -> System.out.println("Refresh button pressed"));
+        refreshButton.setOnAction(event -> Platform.runLater(() -> refresh()));
 
-        //test image insertion
-        Image naoto = new Image("/img/naoto.jpg",400, 400, false, true);
-        buffImage.setImage(naoto);
+        submitButton.setOnAction(event -> Platform.runLater(() -> switchToWait()));
 
-        buffPane.setOnMouseClicked(event -> choose(true));
-        debuffPane.setOnMouseClicked(event -> choose(false));
+        buffPane.setOnMouseClicked(event -> {
+             if (Integer.parseInt(goldLabel.getText()) >= buff.getCost()) choose(true);
+        });
+        debuffPane.setOnMouseClicked(event -> {
+            if (Integer.parseInt(goldLabel.getText()) >= debuff.getCost()) choose(false);
+        });
 
         goldLabel.setText(maintainer.getAttribute("gold").orElse(0).toString());
 
@@ -95,6 +105,7 @@ public class SetupController implements Initializable {
     }
 
     private void choose(Boolean isBuff) {
+        this.isBuff = isBuff;
         buffPane.pseudoClassStateChanged(PseudoClass.getPseudoClass("chosen"), isBuff);
         debuffPane.pseudoClassStateChanged(PseudoClass.getPseudoClass("chosen"), !isBuff);
         submitButton.setDisable(false);
@@ -107,5 +118,36 @@ public class SetupController implements Initializable {
     private void switchToWait() {
         service.shutdownNow();
         ScreenNavigator.loadScreen(ScreenNavigator.WAIT);
+    }
+
+    private void getPair() {
+        buff = effects.getRandomBuff();
+        buffCost.setText(buff.getCost().toString() + " gold");
+        buffEffect.setText(buff.getEffectText());
+        Image buffImg = new Image(buff.getImagePath(),200, 200, false, true);
+        buffImage.setImage(buffImg);
+
+        debuff = effects.getRandomDebuff();
+        debuffCost.setText(debuff.getCost().toString() + " gold");
+        debuffEffect.setText(debuff.getEffectText());
+        Image debuffImg = new Image(debuff.getImagePath(),200, 200, false, true);
+        debuffImage.setImage(debuffImg);
+    }
+
+    private void refresh() {
+        try {
+            Integer gold = maintainer.getAttribute("gold").orElse(0);
+            if (gold > 0) {
+                gold--;
+                maintainer.setAttribute("gold", gold);
+                goldLabel.setText(gold.toString());
+                getPair();
+                submitButton.setDisable(true);
+                buffPane.pseudoClassStateChanged(PseudoClass.getPseudoClass("chosen"), false);
+                debuffPane.pseudoClassStateChanged(PseudoClass.getPseudoClass("chosen"), false);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

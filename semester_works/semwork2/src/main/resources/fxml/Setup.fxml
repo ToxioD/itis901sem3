@@ -20,7 +20,10 @@
                   <Font size="27.0" />
                </font>
             </Label>
-            <Label fx:id="buffCost" layoutX="135.0" layoutY="64.0" text="5 gold" />
+            <Label fx:id="buffCost" alignment="CENTER" layoutX="131.0" layoutY="51.0" text="5 gold" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
             <Label fx:id="buffEffect" layoutX="14.0" layoutY="139.0" text="+3 damage">
                <font>
                   <Font size="24.0" />
@@ -39,7 +42,10 @@
                   <Font size="27.0" />
                </font>
             </Label>
-            <Label fx:id="debuffCost" layoutX="135.0" layoutY="64.0" text="5 gold" />
+            <Label fx:id="debuffCost" alignment="CENTER" layoutX="131.0" layoutY="51.0" text="5 gold">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
             <Label fx:id="debuffEffect" layoutX="14.0" layoutY="139.0" text="+3 damage">
                <font>
                   <Font size="24.0" />
