@@ -11,6 +11,7 @@ import java.util.List;
 @EqualsAndHashCode
 @Builder
 public class Character {
+    private Integer maxHp;
     private Integer hp;
     public Integer gold;
     private Integer hitChance;

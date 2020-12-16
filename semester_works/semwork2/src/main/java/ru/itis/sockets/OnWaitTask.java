@@ -3,31 +3,29 @@ package ru.itis.sockets;
 import javafx.application.Platform;
 import javafx.concurrent.Task;
 import ru.itis.controllers.ChatController;
+import ru.itis.controllers.WaitController;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.concurrent.Callable;
 
-public class CheckConnectionTask implements Callable<Boolean> {
+public class OnWaitTask extends Task<Void> {
     private BufferedReader fromServer;
-    private ChatController controller;
+    private WaitController controller;
 
-    public CheckConnectionTask(BufferedReader fromServer, ChatController controller) {
+    public OnWaitTask(BufferedReader fromServer, WaitController controller) {
         this.fromServer = fromServer;
         this.controller = controller;
     }
 
     @Override
-    public Boolean call() throws Exception {
+    protected Void call() throws Exception {
         while (true) {
             try {
                 String messageFromServer = fromServer.readLine();
-                if (messageFromServer.equals("ping")) {
-                    Platform.runLater(() -> controller.connectedCheck.setSelected(true));
-                    Platform.runLater(() -> controller.readyButton.setVisible(true));
-                    Platform.runLater(() -> controller.readyButton.setDisable(false));
-                    Platform.runLater(() -> controller.sendButton.setDisable(false));
-                    return true;
+                if (messageFromServer != null) {
+                    if (messageFromServer.equals("ping")) {
+                        controller.switchToBrawl();
+                    }
                 }
                 try {
                     Thread.sleep(10);

@@ -25,6 +25,7 @@ public class CharacterMaintainer {
             List<Integer> values = Arrays.stream(valuesAsStrings).map(x -> Integer.parseInt(x))
                     .collect(Collectors.toList());
             player = Character.builder()
+                    .maxHp(values.get(0))
                     .hp(values.get(0))
                     .gold(values.get(1))
                     .hitChance(values.get(2))

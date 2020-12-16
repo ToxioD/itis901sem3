@@ -52,7 +52,9 @@ public class EchoServerSocket {
                     String message = from.readLine();
                     if (message != null) {
                         if (message.equals("ping")) {
+                            System.out.println("ping from " + t.getName());
                             to.println("ping");
+                            System.out.println("sent");
                         } else if (message.equals("ready")) {
                             self.println("disable");
                             to.println("ready");

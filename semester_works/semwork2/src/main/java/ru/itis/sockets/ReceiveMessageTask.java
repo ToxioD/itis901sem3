@@ -38,6 +38,11 @@ public class ReceiveMessageTask extends Task<Void> {
                                 controller.helloLabel.getPrefHeight() + 14));
                     }
                 }
+                try {
+                    Thread.sleep(300);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
             } catch (IOException e) {
                 throw new IllegalStateException(e);
             }
