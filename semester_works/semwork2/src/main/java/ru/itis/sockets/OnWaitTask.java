@@ -1,5 +1,6 @@
 package ru.itis.sockets;
 
+import javafx.application.Platform;
 import javafx.concurrent.Task;
 import ru.itis.controllers.WaitController;
 
@@ -22,7 +23,7 @@ public class OnWaitTask extends Task<Void> {
                 String messageFromServer = fromServer.readLine();
                 if (messageFromServer != null) {
                     if (messageFromServer.equals("ping")) {
-                        controller.switchToBrawl();
+                        Platform.runLater(() -> controller.switchToBrawl());
                     }
                 }
                 try {

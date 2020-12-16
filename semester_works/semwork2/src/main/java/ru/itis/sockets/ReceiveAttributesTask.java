@@ -21,7 +21,7 @@ public class ReceiveAttributesTask extends Task<Void> {
         while (true) {
             try {
                 String messageFromServer = fromServer.readLine();
-                if (messageFromServer != null) {
+                if (messageFromServer != null && !messageFromServer.equals("ping")) {
                     String[] attribute = messageFromServer.split(",");
                     if (attribute[0].equals("hit")) {
                         if (Integer.parseInt(attribute[1]) == 0) {
@@ -31,6 +31,7 @@ public class ReceiveAttributesTask extends Task<Void> {
                         }
                     } else if (attribute[0].equals("damage")) {
                         Platform.runLater(() -> controller.dealDamageToSelf(Integer.parseInt(attribute[1])));
+                        this.cancel();
                     } else Platform.runLater(() -> controller.updateEnemyAttribute(attribute[0], Integer.parseInt(attribute[1])));
                 }
                 try {

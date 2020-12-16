@@ -27,6 +27,6 @@ public class WaitController implements Initializable {
 
     public void switchToBrawl() {
         service.shutdownNow();
-        Platform.runLater(() -> ScreenNavigator.loadScreen(ScreenNavigator.BRAWL));
+        ScreenNavigator.loadScreen(ScreenNavigator.BRAWL);
     }
 }

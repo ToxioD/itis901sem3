@@ -97,12 +97,12 @@ public class ChatController implements Initializable {
 
     public void playerReady() {
         readyCount++;
-        if (readyCount == 2) switchToSetup();
+        if (readyCount == 2) Platform.runLater(() -> switchToSetup());
     }
 
     private void switchToSetup() {
         service.shutdownNow();
-        Platform.runLater(() -> ScreenNavigator.loadScreen(ScreenNavigator.SETUP));
+        ScreenNavigator.loadScreen(ScreenNavigator.SETUP);
     }
 
     public void shutdown() {

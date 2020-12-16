@@ -63,10 +63,10 @@ public class BrawlController implements Initializable {
         client = MainController.getClient();
         ReceiveAttributesTask receiveAttributesTask = new ReceiveAttributesTask(client.getFromServer(), this);
         service = Executors.newScheduledThreadPool(2);
-        service.execute(receiveAttributesTask);
+        service.schedule(receiveAttributesTask, 100, TimeUnit.MILLISECONDS);
         service.schedule(() -> Platform.runLater(() -> tryToHit()), 3, TimeUnit.SECONDS);
         service.schedule(() -> Platform.runLater(() -> dealDamage()), 5, TimeUnit.SECONDS);
-        service.schedule(() -> switchToSetup(), 8, TimeUnit.SECONDS);
+        service.schedule(() -> Platform.runLater(() -> switchToSetup()), 8, TimeUnit.SECONDS);
 
 
         Platform.runLater(() -> updatePlayerAttributes());
@@ -125,7 +125,7 @@ public class BrawlController implements Initializable {
     }
 
     private void switchToSetup() {
-        service.shutdown();
-        Platform.runLater(() -> ScreenNavigator.loadScreen(ScreenNavigator.SETUP));
+        service.shutdownNow();
+        ScreenNavigator.loadScreen(ScreenNavigator.SETUP);
     }
 }

@@ -84,7 +84,7 @@ public class SetupController implements Initializable {
         goldLabel.setText(maintainer.getAttribute("gold").orElse(0).toString());
 
         service = Executors.newScheduledThreadPool(1);
-        service.schedule(() -> switchToWait(),
+        service.schedule(() -> Platform.runLater(() -> switchToWait()),
                 30, TimeUnit.SECONDS);
 
         Timeline timer = new Timeline(new KeyFrame(Duration.millis(30), animation -> {
@@ -106,6 +106,6 @@ public class SetupController implements Initializable {
 
     private void switchToWait() {
         service.shutdownNow();
-        Platform.runLater(() -> ScreenNavigator.loadScreen(ScreenNavigator.WAIT));
+        ScreenNavigator.loadScreen(ScreenNavigator.WAIT);
     }
 }
