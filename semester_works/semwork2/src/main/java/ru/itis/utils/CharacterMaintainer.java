@@ -65,6 +65,8 @@ public class CharacterMaintainer {
             String target = effect.getEffectTarget();
             Integer newValue = getAttribute(target).orElse(1) + effect.getEffectModifier();
             setAttribute(target, newValue);
+
+            player.setGold(player.getGold() - effect.getCost());
         } catch (Exception e) {
             e.printStackTrace();
         }
