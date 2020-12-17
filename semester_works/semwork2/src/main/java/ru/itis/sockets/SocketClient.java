@@ -26,6 +26,10 @@ public class SocketClient {
         toServer.println(": " + message);
     }
 
+    public void sendString(String string) {
+        toServer.println(string);
+    }
+
     public void sendAttribute(String attribute, Integer value) {
         toServer.println(attribute + "," + value);
     }

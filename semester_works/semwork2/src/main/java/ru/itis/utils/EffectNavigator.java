@@ -49,6 +49,10 @@ public class EffectNavigator {
                 .imagePath("/img/" + effect[5] + ".png").build();
     }
 
+    public String encodeEffect(Effect effect) {
+        return effect.toString();
+    }
+
     public Effect getRandomBuff() {
         Collections.shuffle(buffs);
         return buffs.get(0);

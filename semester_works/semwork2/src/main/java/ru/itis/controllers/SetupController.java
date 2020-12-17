@@ -15,6 +15,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import ru.itis.models.Effect;
+import ru.itis.sockets.SocketClient;
 import ru.itis.utils.CharacterMaintainer;
 import ru.itis.utils.EffectNavigator;
 import ru.itis.utils.ScreenNavigator;
@@ -34,6 +35,7 @@ public class SetupController implements Initializable {
     private Effect buff;
     private Effect debuff;
     private Boolean isBuff;
+    private SocketClient client;
 
     @FXML
     private Pane buffPane;
@@ -75,6 +77,8 @@ public class SetupController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         isBuff = false;
 
+        client = MainController.getClient();
+
         maintainer = MainController.getPlayerMaintainer();
         effects = MainController.getEffectNavigator();
 
@@ -94,8 +98,10 @@ public class SetupController implements Initializable {
         goldLabel.setText(maintainer.getAttribute("gold").orElse(0).toString());
 
         service = Executors.newScheduledThreadPool(1);
-        service.schedule(() -> Platform.runLater(() -> switchToWait()),
-                30, TimeUnit.SECONDS);
+        service.schedule(() -> Platform.runLater(() -> {
+                client.pingServer();
+                switchToWait();
+            }), 30, TimeUnit.SECONDS);
 
         Timeline timer = new Timeline(new KeyFrame(Duration.millis(30), animation -> {
             timerBar.setProgress(timerBar.getProgress() - 0.001d);
@@ -154,9 +160,11 @@ public class SetupController implements Initializable {
     private void submit() {
         if (isBuff) {
             maintainer.addEffect(buff);
+            client.pingServer();
             switchToWait();
         } else {
-            //TODO: add debuff to other player
+            client.sendString(effects.encodeEffect(debuff));
+            switchToWait();
         }
     }
 }

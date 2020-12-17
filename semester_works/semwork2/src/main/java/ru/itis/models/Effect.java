@@ -15,4 +15,14 @@ public class Effect {
     private Integer effectModifier;
     private Boolean isPermanent;
     private String imagePath;
+
+    @Override
+    public String toString() {
+        return "" + cost +
+                "," + effectText +
+                "," + effectTarget +
+                "," + effectModifier +
+                "," + isPermanent +
+                "," + imagePath;
+    }
 }

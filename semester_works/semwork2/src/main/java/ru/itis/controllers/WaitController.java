@@ -19,10 +19,10 @@ public class WaitController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         SocketClient client = MainController.getClient();
-        OnWaitTask onWaitTask = new OnWaitTask(client.getFromServer(), this);
+        OnWaitTask onWaitTask = new OnWaitTask(client.getFromServer(), this,
+                MainController.getEffectNavigator(), MainController.getPlayerMaintainer());
         service = Executors.newFixedThreadPool(1);
         service.execute(onWaitTask);
-        client.pingServer();
     }
 
     public void switchToBrawl() {
