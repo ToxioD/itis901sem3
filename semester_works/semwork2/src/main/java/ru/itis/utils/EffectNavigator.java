@@ -23,13 +23,7 @@ public class EffectNavigator {
             String buffAsString = br.readLine();
             while (buffAsString != null) {
                 String[] buff = buffAsString.split(",");
-                buffs.add(Effect.builder()
-                        .cost(Integer.parseInt(buff[0]))
-                        .effectText(buff[1])
-                        .effectTarget(buff[2])
-                        .effectModifier(Integer.parseInt(buff[3]))
-                        .isPermanent(Boolean.parseBoolean(buff[4]))
-                        .imagePath("/img/"+buff[5]+".png").build());
+                buffs.add(parseEffect(buff));
                 buffAsString = br.readLine();
             }
 
@@ -39,16 +33,20 @@ public class EffectNavigator {
             String debuffAsString = br2.readLine();
             while (debuffAsString != null) {
                 String[] debuff = debuffAsString.split(",");
-                debuffs.add(Effect.builder()
-                        .cost(Integer.parseInt(debuff[0]))
-                        .effectText(debuff[1])
-                        .effectTarget(debuff[2])
-                        .effectModifier(Integer.parseInt(debuff[3]))
-                        .isPermanent(Boolean.parseBoolean(debuff[4]))
-                        .imagePath("/img/" + debuff[5] + ".png").build());
+                debuffs.add(parseEffect(debuff));
                 debuffAsString = br2.readLine();
             }
         } catch (IOException e) {}
+    }
+
+    public Effect parseEffect(String[] effect) {
+        return Effect.builder()
+                .cost(Integer.parseInt(effect[0]))
+                .effectText(effect[1])
+                .effectTarget(effect[2])
+                .effectModifier(Integer.parseInt(effect[3]))
+                .isPermanent(Boolean.parseBoolean(effect[4]))
+                .imagePath("/img/" + effect[5] + ".png").build();
     }
 
     public Effect getRandomBuff() {
