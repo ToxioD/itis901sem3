@@ -68,7 +68,7 @@ public class CharacterMaintainer {
         try {
             String target = effect.getEffectTarget();
             Integer newValue = getAttribute(target).orElse(1) + effect.getEffectModifier();
-            setAttribute(target, newValue);
+            setAttribute(target, newValue >= 0 ? newValue : 0);
         } catch (Exception e) {
             e.printStackTrace();
         }
