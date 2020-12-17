@@ -159,10 +159,12 @@ public class SetupController implements Initializable {
 
     private void submit() {
         if (isBuff) {
+            maintainer.payForEffect(buff);
             maintainer.addEffect(buff);
             client.pingServer();
             switchToWait();
         } else {
+            maintainer.payForEffect(debuff);
             client.sendString(effects.encodeEffect(debuff));
             switchToWait();
         }

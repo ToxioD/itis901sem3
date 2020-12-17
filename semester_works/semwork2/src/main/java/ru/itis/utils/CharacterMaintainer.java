@@ -52,6 +52,10 @@ public class CharacterMaintainer {
         }
     }
 
+    public void payForEffect(Effect effect) {
+        player.setGold(player.getGold() - effect.getCost());
+    }
+
     public void addEffect(Effect effect) {
         if (effect.getIsPermanent()) {
             player.permanentEffects.add(effect);
@@ -65,8 +69,6 @@ public class CharacterMaintainer {
             String target = effect.getEffectTarget();
             Integer newValue = getAttribute(target).orElse(1) + effect.getEffectModifier();
             setAttribute(target, newValue);
-
-            player.setGold(player.getGold() - effect.getCost());
         } catch (Exception e) {
             e.printStackTrace();
         }
