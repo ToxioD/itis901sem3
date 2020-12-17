@@ -87,6 +87,8 @@ public class SetupController implements Initializable {
 
         Platform.runLater(() -> getPair());
 
+        ImageView refreshImage = new ImageView(new Image("/img/refresh.png", 48, 48, false, true));
+        refreshButton.setGraphic(refreshImage);
         refreshButton.setOnAction(event -> Platform.runLater(() -> refresh()));
 
         submitButton.setOnAction(event -> Platform.runLater(() -> submit()));

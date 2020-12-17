@@ -11,8 +11,8 @@
 
 <AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" stylesheets="@../css/setup.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.itis.controllers.SetupController">
    <children>
-      <Button fx:id="refreshButton" layoutX="268.0" layoutY="93.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="65.0" />
-      <Pane fx:id="buffPane" layoutX="68.0" layoutY="25.0" prefHeight="200.0" prefWidth="200.0">
+      <Button fx:id="refreshButton" contentDisplay="CENTER" layoutX="264.0" layoutY="89.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="73.0" />
+      <Pane fx:id="buffPane" layoutX="58.0" layoutY="25.0" prefHeight="200.0" prefWidth="200.0">
          <children>
             <ImageView fx:id="buffImage" fitHeight="100.0" fitWidth="100.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
             <Label layoutX="127.0" layoutY="14.0" text="Cost:">
@@ -34,7 +34,7 @@
             <String fx:value="pane" />
             <String fx:value="buff" />
          </styleClass></Pane>
-      <Pane fx:id="debuffPane" layoutX="333.0" layoutY="25.0" prefHeight="200.0" prefWidth="200.0">
+      <Pane fx:id="debuffPane" layoutX="343.0" layoutY="25.0" prefHeight="200.0" prefWidth="200.0">
          <children>
             <ImageView fx:id="debuffImage" fitHeight="100.0" fitWidth="100.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
             <Label layoutX="127.0" layoutY="14.0" text="Cost:">
@@ -72,5 +72,6 @@
          </children>
       </Pane>
       <ProgressBar fx:id="timerBar" layoutX="5.0" layoutY="368.0" prefHeight="18.0" prefWidth="589.0" progress="1.0" />
+      <Button fx:id="skipButton" layoutX="509.0" layoutY="293.0" mnemonicParsing="false" text="Skip" />
    </children>
 </AnchorPane>
