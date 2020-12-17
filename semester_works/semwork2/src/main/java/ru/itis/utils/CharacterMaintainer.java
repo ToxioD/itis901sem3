@@ -1,6 +1,7 @@
 package ru.itis.utils;
 
 import ru.itis.models.Character;
+import ru.itis.models.Effect;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -49,5 +50,28 @@ public class CharacterMaintainer {
         } catch (NoSuchFieldException e) {
             throw new IllegalStateException(e);
         }
+    }
+
+    public void addEffect(Effect effect) {
+        if (effect.getIsPermanent()) {
+            player.permanentEffects.add(effect);
+        } else {
+            takeEffect(effect);
+        }
+    }
+
+    private void takeEffect(Effect effect) {
+        try {
+            String target = effect.getEffectTarget();
+            Integer newValue = getAttribute(target).orElse(1) + effect.getEffectModifier();
+            setAttribute(target, newValue);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void takePermanentEffects() {
+        List<Effect> permanentEffects = player.getPermanentEffects();
+        permanentEffects.forEach(this::takeEffect);
     }
 }
