@@ -60,6 +60,8 @@ public class BrawlController implements Initializable {
         playerMaintainer = MainController.getPlayerMaintainer();
         enemyMaintainer = MainController.getEnemyMaintainer();
 
+        playerMaintainer.takePermanentEffects();
+
         client = MainController.getClient();
         ReceiveAttributesTask receiveAttributesTask = new ReceiveAttributesTask(client.getFromServer(), this);
         service = Executors.newScheduledThreadPool(2);

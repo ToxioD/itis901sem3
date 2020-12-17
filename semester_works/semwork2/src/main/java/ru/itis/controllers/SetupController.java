@@ -82,7 +82,7 @@ public class SetupController implements Initializable {
 
         refreshButton.setOnAction(event -> Platform.runLater(() -> refresh()));
 
-        submitButton.setOnAction(event -> Platform.runLater(() -> switchToWait()));
+        submitButton.setOnAction(event -> Platform.runLater(() -> submit()));
 
         buffPane.setOnMouseClicked(event -> {
              if (Integer.parseInt(goldLabel.getText()) >= buff.getCost()) choose(true);
@@ -148,6 +148,15 @@ public class SetupController implements Initializable {
             }
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    private void submit() {
+        if (isBuff) {
+            maintainer.addEffect(buff);
+            switchToWait();
+        } else {
+            //TODO: add debuff to other player
         }
     }
 }
