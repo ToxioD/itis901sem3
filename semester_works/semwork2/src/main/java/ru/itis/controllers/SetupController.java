@@ -73,6 +73,9 @@ public class SetupController implements Initializable {
     @FXML
     private ProgressBar timerBar;
 
+    @FXML
+    private Button skipButton;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         isBuff = false;
@@ -96,6 +99,11 @@ public class SetupController implements Initializable {
         });
 
         goldLabel.setText(maintainer.getAttribute("gold").orElse(0).toString());
+
+        skipButton.setOnAction(event -> {
+            client.pingServer();
+            switchToWait();
+        });
 
         service = Executors.newScheduledThreadPool(1);
         service.schedule(() -> Platform.runLater(() -> {

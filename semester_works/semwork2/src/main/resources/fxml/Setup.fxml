@@ -72,5 +72,6 @@
          </children>
       </Pane>
       <ProgressBar fx:id="timerBar" layoutX="5.0" layoutY="368.0" prefHeight="18.0" prefWidth="589.0" progress="1.0" />
+      <Button fx:id="skipButton" layoutX="509.0" layoutY="293.0" mnemonicParsing="false" text="Skip" />
    </children>
 </AnchorPane>
