@@ -1,8 +1,6 @@
 package ru.itis.controllers;
 
-import javafx.application.Platform;
 import javafx.fxml.Initializable;
-import ru.itis.sockets.CheckConnectionTask;
 import ru.itis.sockets.OnWaitTask;
 import ru.itis.sockets.SocketClient;
 import ru.itis.utils.ScreenNavigator;

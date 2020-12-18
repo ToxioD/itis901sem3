@@ -1,17 +1,11 @@
 package ru.itis.application;
 
 import javafx.application.Application;
-import javafx.application.Platform;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import javafx.stage.WindowEvent;
-import ru.itis.controllers.ChatController;
 import ru.itis.controllers.MainController;
-import ru.itis.controllers.SetupController;
 import ru.itis.utils.ScreenNavigator;
 
 import java.io.IOException;
@@ -23,7 +17,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        stage.setTitle("11-901");
+        stage.setTitle("11-901 AutoBattler");
         stage.setScene(
                 new Scene(
                         loadMainPane()

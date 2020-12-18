@@ -12,7 +12,6 @@ import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
 import javafx.util.Duration;
 import ru.itis.models.Effect;
 import ru.itis.sockets.SocketClient;
@@ -28,7 +27,6 @@ import java.util.concurrent.TimeUnit;
 
 public class SetupController implements Initializable {
 
-    private Stage stage;
     private ScheduledExecutorService service;
     private CharacterMaintainer maintainer;
     private EffectNavigator effects;
@@ -125,10 +123,6 @@ public class SetupController implements Initializable {
         buffPane.pseudoClassStateChanged(PseudoClass.getPseudoClass("chosen"), isBuff);
         debuffPane.pseudoClassStateChanged(PseudoClass.getPseudoClass("chosen"), !isBuff);
         submitButton.setDisable(false);
-    }
-
-    public void setStage(Stage stage) {
-        this.stage = stage;
     }
 
     private void switchToWait() {
