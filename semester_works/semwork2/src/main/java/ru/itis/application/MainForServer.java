@@ -1,10 +1,10 @@
 package ru.itis.application;
 
-import ru.itis.sockets.EchoServerSocket;
+import ru.itis.sockets.GameServerSocket;
 
 public class MainForServer {
     public static void main(String[] args) {
-        EchoServerSocket serverSocket = new EchoServerSocket();
+        GameServerSocket serverSocket = new GameServerSocket();
         serverSocket.start(7777);
     }
 }
