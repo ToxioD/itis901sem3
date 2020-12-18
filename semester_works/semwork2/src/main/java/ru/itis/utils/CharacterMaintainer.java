@@ -15,6 +15,7 @@ import java.util.stream.Collectors;
 public class CharacterMaintainer {
 
     private static final String DEFAULT_CHAR = "/csv/character.csv";
+    private static final Integer DEFAULT_INCOME = 2;
 
     private Character player;
 
@@ -75,6 +76,7 @@ public class CharacterMaintainer {
     }
 
     public void takePermanentEffects() {
+        player.setGold(player.getGold() + DEFAULT_INCOME);
         List<Effect> permanentEffects = player.getPermanentEffects();
         permanentEffects.forEach(this::takeEffect);
     }
