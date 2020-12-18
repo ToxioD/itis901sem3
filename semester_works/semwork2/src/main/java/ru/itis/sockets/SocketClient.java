@@ -45,4 +45,11 @@ public class SocketClient {
     public BufferedReader getFromServer() {
         return fromServer;
     }
+
+    public void closeConnection() {
+        try {
+            toServer.println("close");
+            client.close();
+        } catch (IOException e) {}
+    }
 }

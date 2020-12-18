@@ -57,6 +57,8 @@ public class EchoServerSocket {
                         } else if (message.startsWith(":")) {
                             self.println("Message from " + t.getName() + message);
                             to.println("Message from " + t.getName() + message);
+                        } else if (message.equals("close")) {
+                            t.interrupt();
                         } else {
                             System.out.println(t.getName() + " " + message);
                             to.println(message);

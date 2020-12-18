@@ -1,5 +1,6 @@
 package ru.itis.controllers;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
@@ -35,6 +36,11 @@ public class MainController {
 
     public static EffectNavigator getEffectNavigator() {
         return effectNavigator;
+    }
+
+    public static void shutdown() {
+        Platform.exit();
+        client.closeConnection();
     }
 
 }

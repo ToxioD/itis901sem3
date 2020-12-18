@@ -104,10 +104,4 @@ public class ChatController implements Initializable {
         service.shutdownNow();
         ScreenNavigator.loadScreen(ScreenNavigator.SETUP);
     }
-
-    public void shutdown() {
-        service.shutdownNow();
-        Platform.exit();
-        stage.close();
-    }
 }
