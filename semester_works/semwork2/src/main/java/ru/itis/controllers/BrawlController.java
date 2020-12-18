@@ -69,7 +69,7 @@ public class BrawlController implements Initializable {
         service.schedule(() -> Platform.runLater(() -> tryToHit()), 3, TimeUnit.SECONDS);
         service.schedule(() -> Platform.runLater(() -> dealDamage()), 5, TimeUnit.SECONDS);
         service.schedule(() -> client.sendAttribute("end",0), 7, TimeUnit.SECONDS);
-        service.schedule(() -> Platform.runLater(() -> switchToSetup()), 8, TimeUnit.SECONDS);
+        service.schedule(() -> Platform.runLater(() -> resolveBattle()), 8, TimeUnit.SECONDS);
 
 
         Platform.runLater(() -> updatePlayerAttributes());
@@ -130,8 +130,27 @@ public class BrawlController implements Initializable {
         client.sendAttribute("damage", damage);
     }
 
-    private void switchToSetup() {
+    private void resolveBattle() {
         service.shutdownNow();
+        Integer playerHealth = playerMaintainer.getAttribute("hp").orElse(1);
+        Integer enemyHealth = enemyMaintainer.getAttribute("hp").orElse(1);
+        if (playerHealth == 0 || enemyHealth == 0) {
+            if (playerHealth == 0 && enemyHealth == 0) {
+                MainController.setIsDraw(true);
+            } else {
+                MainController.setIsWinner(enemyHealth == 0);
+            }
+            switchToEnd();
+        } else {
+            switchToSetup();
+        }
+    }
+
+    private void switchToSetup() {
         ScreenNavigator.loadScreen(ScreenNavigator.SETUP);
+    }
+
+    private void switchToEnd() {
+        ScreenNavigator.loadScreen(ScreenNavigator.END);
     }
 }

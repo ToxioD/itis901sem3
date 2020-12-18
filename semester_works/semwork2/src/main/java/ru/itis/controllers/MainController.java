@@ -15,6 +15,9 @@ public class MainController {
     private static CharacterMaintainer enemyMaintainer = new CharacterMaintainer();
     private static EffectNavigator effectNavigator = new EffectNavigator();
 
+    private static Boolean isWinner = false;
+    private static Boolean isDraw = false;
+
     @FXML
     private AnchorPane screenHolder;
 
@@ -36,6 +39,22 @@ public class MainController {
 
     public static EffectNavigator getEffectNavigator() {
         return effectNavigator;
+    }
+
+    public static Boolean getIsWinner() {
+        return isWinner;
+    }
+
+    public static void setIsWinner(Boolean isWinner) {
+        MainController.isWinner = isWinner;
+    }
+
+    public static Boolean getIsDraw() {
+        return isDraw;
+    }
+
+    public static void setIsDraw(Boolean isDraw) {
+        MainController.isDraw = isDraw;
     }
 
     public static void shutdown() {

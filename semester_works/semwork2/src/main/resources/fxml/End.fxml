@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.itis.controllers.EndController">
+   <children>
+      <Label layoutX="252.0" layoutY="38.0" text="Winner is:">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="winnerLabel" alignment="CENTER" layoutX="214.0" layoutY="84.0" text="somebody" textAlignment="CENTER">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Label>
+      <Label fx:id="textLabel" alignment="CENTER" layoutX="252.0" layoutY="155.0" text="some text" textAlignment="CENTER">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="exitButton" layoutX="230.0" layoutY="256.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="140.0" text="Exit" />
+   </children>
+</AnchorPane>

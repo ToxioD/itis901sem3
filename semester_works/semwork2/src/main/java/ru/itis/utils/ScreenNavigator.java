@@ -12,6 +12,7 @@ public class ScreenNavigator {
     public static final String SETUP = "/fxml/Setup.fxml";
     public static final String WAIT = "/fxml/Wait.fxml";
     public static final String BRAWL = "/fxml/Brawl.fxml";
+    public static final String END = "/fxml/End.fxml";
 
     private static MainController mainController;
 
