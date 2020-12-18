@@ -5,7 +5,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.itis.controllers.EndController">
    <children>
       <Label layoutX="252.0" layoutY="38.0" text="Winner is:">
@@ -13,12 +12,12 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <Label fx:id="winnerLabel" alignment="CENTER" layoutX="214.0" layoutY="84.0" text="somebody" textAlignment="CENTER">
+      <Label fx:id="winnerLabel" alignment="CENTER" layoutX="22.0" layoutY="84.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="54.0" prefWidth="553.0" text="somebody" textAlignment="CENTER">
          <font>
             <Font size="37.0" />
          </font>
       </Label>
-      <Label fx:id="textLabel" alignment="CENTER" layoutX="252.0" layoutY="155.0" text="some text" textAlignment="CENTER">
+      <Label fx:id="textLabel" alignment="CENTER" layoutX="66.0" layoutY="159.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="464.0" text="some text" textAlignment="CENTER" AnchorPane.bottomAnchor="209.0" AnchorPane.leftAnchor="66.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="159.0">
          <font>
             <Font size="22.0" />
          </font>
